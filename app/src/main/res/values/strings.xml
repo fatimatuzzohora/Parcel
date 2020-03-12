@@ -6,6 +6,58 @@
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
     <string name="signin_word"> Sign in to start your session </string>
+    <string name="title_activity_home_main">HomeActivityMain</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+
+    <!-- Home page-->
+    <string name="merchant_profile">Merchant Profile</string>
+    <string name="gen_info">General Information</string>
+    <string name="contact_info">Contact Information</string>
+    <string name="business_info">Business Information</string>
+    <string name="billing_info">Billing Information</string>
+
+
+    <!--Merchant Profile-->
+    <string name="colon"> : </string>
+    <string name="mer_name">Merchant Name :</string>
+    <string name="mer_contact">Contact Number : </string>
+    <string name="mer_email">Email : </string>
+    <string name="license_no">Trade License Number : </string>
+    <string name="post_code">Post Code : </string>
+    <string name="address">Address : </string>
+    <string name="mailing_address">Mailing Address : </string>
+    <string name="permanant_address">Permanant Address : </string>
+    
+    <string name="contact_name">Full Name : </string>
+    <string name="contact_person_pos">Contact Person Position : </string>
+    <string name="contact_mail">Contact Email : </string>
+    
+    <string name="business_name">Business Name : </string>
+    <string name="business_nature">Business Nature : </string>
+    <string name="pro_type">Product Type : </string>
+    <string name="website">Website : </string>
+    <string name="fb_page">Facebook Page : </string>
+    <string name="fb_page_link">Facebook Page Link : </string>
+
+    <string name="payment_mode">Payment Mode : </string>
+    <string name="bank_no">Bank A/C No : </string>
+    <string name="bank_branch">Bank Branch/Address : </string>
+    <string name="bkash">Bkash No : </string>
+    <string name="rocket">Rocket No : </string>
+
 
 
 </resources>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/global_32dp"
+    tools:context=".Fragment.MerchantInfoFragment">
+
+       <!-- Merchant Name-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mer_name"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maksudur Rahman"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+
+      <!--  Contact Number-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mer_contact"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01711939209"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+       <!-- Merchant Email Address-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mer_email"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="maksudur@gmail.com"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+       <!-- Merchant Trade License number-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/license_no"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567890"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+        <!--Merchant Post Code-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_code"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1216"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+       <!-- Merchant General Address-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mirpur, Dhaka"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+    <!-- Merchant Mailing Address-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mailing_address"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="447, Senpara Parbata, Mirpur, Dhaka"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+    <!-- Merchant Permanant Address-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permanant_address"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="447, Senpara Parbata, Mirpur, Dhaka"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/global_32dp"
+    tools:context=".Fragment.ContactInfoFragment">
+
+
+        <!--Contact person name-->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_name"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/global_4dp"
+                android:padding="@dimen/global_4dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Md. Rubel Hossen"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/global_4dp"
+                android:padding="@dimen/global_4dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        </TableRow>
+
+
+        <!--Contact Person Position-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_person_pos"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+        <!--Contact Number-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mer_contact"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01711939209"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+            <!--Contact Email-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_mail"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rubel@gmail.com"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+</TableLayout>

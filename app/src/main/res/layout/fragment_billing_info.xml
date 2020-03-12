@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/global_32dp"
+    tools:context=".Fragment.BillingInfoFragment">
+
+
+
+        <!--Payment Mode-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment_mode"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+            <!--Bank Account number-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_no"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+       <!-- Bank Branch Address-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_branch"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+            <!--Bkash Number-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bkash"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+              <!--  Rocket number  -->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rocket"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+</TableLayout>
