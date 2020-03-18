@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.MerchantRequestActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_mer_req"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBlue">
+
+        <TextView
+            android:id="@+id/toolbar_title_mer_req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/merchant_request"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/global_16dp"
+        app:cardElevation="@dimen/global_32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/layout_border_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service_name"
+                android:padding="@dimen/global_4dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <Spinner
+                android:id="@+id/sp_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_4dp"
+                android:entries="@array/service_arrays" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/global_16dp"
+        app:cardElevation="@dimen/global_32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/layout_border_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/district_name"
+                android:padding="@dimen/global_4dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_4dp"
+                android:entries="@array/district_arrays" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/global_16dp"
+        app:cardElevation="@dimen/global_32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/layout_border_blue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deliver_person"
+                android:padding="@dimen/global_4dp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/global_4dp"
+                android:entries="@array/delivery_arrays" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_list"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/global_16dp"
+        style="@style/Button"/>
+
+</LinearLayout>

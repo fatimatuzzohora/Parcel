@@ -9,4 +9,7 @@
     <color name="colorBlue">#66CEDB</color>
     <color name="colorDarkBlue">#33B5CA</color>
     <color name="colorLightBlue">#CBDDE6</color>
+
+    <color name="colorDarkPurple">#8E24AA</color>
+    <color name="colorLightPurple">#AB47BC</color>
 </resources>

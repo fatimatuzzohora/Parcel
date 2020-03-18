@@ -19,10 +19,7 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e) {
             Log.e("main_err", e.getMessage());
         }
-
-
         finish();
-
 
     }
 }

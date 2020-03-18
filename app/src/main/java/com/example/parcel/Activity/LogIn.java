@@ -26,7 +26,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         switch (view.getId()){
 
             case R.id.sign_in :
-                startActivity(new Intent(LogIn.this, HomeActivityMain.class));
+                startActivity(new Intent(LogIn.this, HomeActivity.class));
                 break;
         }
 

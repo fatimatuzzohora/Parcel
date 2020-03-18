@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_8dp"
+        app:cardCornerRadius="@dimen/global_8dp"
+        app:cardMaxElevation="@dimen/global_8dp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_8dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/merchant_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/global_16dp"
+                    android:gravity="center"
+                    android:text="@string/merchant_profile"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:id="@+id/merchant_request"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/global_16dp"
+                    android:gravity="center"
+                    android:text="@string/merchant_request"
+                    android:textColor="@color/colorDarkBlue"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_8dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/global_16dp"
+                    android:gravity="center"
+                    android:text="@string/pick_up_report"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_border_blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/global_16dp"
+                    android:gravity="center"
+                    android:text="@string/parcel_return_report"
+                    android:textColor="@color/colorDarkBlue"
+                    android:fontFamily="sans-serif-light"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+            </RelativeLayout>
+
+
+                 </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

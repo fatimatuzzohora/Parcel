@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="global_2dp">2dp</dimen>
+    <dimen name="global_3dp">3dp</dimen>
+    <dimen name="global_4dp">4dp</dimen>
 
     <dimen name="global_8dp">8dp</dimen>
     <dimen name="global_16dp">16dp</dimen>
     <dimen name="global_32dp">32dp</dimen>
+    <dimen name="global_48dp">48dp</dimen>
 
     <!-- Customer registration -->
     <dimen name="drawable_padding_8dp">8dp</dimen>
@@ -14,8 +18,7 @@
     <dimen name="listview_height_200dp">200dp</dimen>
     <dimen name="picture_height_100">100dp</dimen>
     <dimen name="picture_width_100">100</dimen>
-    <dimen name="global_4dp">4dp</dimen>
-    <dimen name="global_2dp">2dp</dimen>
+
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>

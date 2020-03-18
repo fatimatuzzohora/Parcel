@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.example.parcel.Adapter.AdapterPager;
 import com.example.parcel.Fragment.BillingInfoFragment;
@@ -19,6 +20,11 @@ public class MerchantProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_profile);
+
+        Toolbar toolbar = findViewById(R.id.tb_mer_pro);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
         //hide the toolbar....
