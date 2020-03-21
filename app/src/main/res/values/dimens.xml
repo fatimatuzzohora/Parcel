@@ -19,6 +19,9 @@
     <dimen name="picture_height_100">100dp</dimen>
     <dimen name="picture_width_100">100</dimen>
 
+    <dimen name="logo_width_50">50dp</dimen>
+    <dimen name="logo_height_50">50dp</dimen>
+
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
