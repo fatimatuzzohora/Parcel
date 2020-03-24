@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.example.parcel.Activity.HomeActivity;
 import com.example.parcel.Activity.LogIn;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,5 @@ public class MainActivity extends AppCompatActivity {
             Log.e("main_err", e.getMessage());
         }
         finish();
-
     }
 }

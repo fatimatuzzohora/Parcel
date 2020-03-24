@@ -14,14 +14,13 @@
 
 
     <!-- Home page-->
-    <string name="home">Home</string>
     <string name="merchant_profile">Merchant Profile</string>
     <string name="merchant_request">Merchant Request</string>
     <string name="pick_up_report">Pick Up Report</string>
     <string name="parcel_return_report">Parcel Return Report</string>
 
    <!--Home page:  Header line-->
-    <string name="monthly_report">Current Month Report</string>
+    <string name="monthly_report">Monthly View</string>
     <string name="dashboard">Dashboard</string>
     <string name="report">Report</string>
 

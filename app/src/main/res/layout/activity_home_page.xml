@@ -12,6 +12,7 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
+       android:background="@color/colorWhite"
        android:orientation="vertical">
 
 
@@ -20,20 +21,9 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/monthly_report"
-          android:layout_marginTop="@dimen/global_2dp"
-          android:layout_marginBottom="@dimen/global_2dp"
-          android:layout_marginStart="@dimen/global_8dp"
-          android:fontFamily="sans-serif-light"
-          android:textColor="@color/colorDarkBlue"
-          android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+          android:gravity="center"
+          style="@style/HeaderTextView" />
 
-      <View
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/global_2dp"
-          android:layout_marginBottom="@dimen/global_2dp"
-          android:layout_marginLeft="@dimen/global_8dp"
-          android:layout_marginRight="@dimen/global_8dp"
-          android:background="@color/colorDarkBlue"/>
 
       <include
           layout="@layout/activity_home_part1" />
