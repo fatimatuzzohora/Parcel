@@ -32,6 +32,8 @@
     <string name="delivery">Delivery</string>
     <string name="cancel">Cancel</string>
     <string name="on_process">On Process</string>
+    <string name="total">Total</string>
+    <string name="demo_num">2020</string>
 
 
     <!--Merchant Profile-->

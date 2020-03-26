@@ -10,6 +10,9 @@
     <color name="colorDarkBlue">#33B5CA</color>
     <color name="colorLightBlue">#CBDDE6</color>
 
+    <color name="colorAsh">#b2beb5</color>
+    <color name="colorLightAsh">#E5E7E9</color>
+
     <color name="colorDarkPurple">#8E24AA</color>
     <color name="colorLightPurple">#AB47BC</color>
 

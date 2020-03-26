@@ -14,15 +14,15 @@
        android:layout_height="wrap_content"
        android:background="@color/colorWhite"
        android:orientation="vertical">
-
-
+      
 
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/monthly_report"
           android:gravity="center"
-          style="@style/HeaderTextView" />
+          android:layout_margin="@dimen/global_8dp"
+          style="@style/NormalTextView" />
 
 
       <include
