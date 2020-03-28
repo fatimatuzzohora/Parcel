@@ -20,15 +20,38 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/monthly_report"
+          android:textColor="@color/colorPink"
           android:gravity="center"
-          android:layout_margin="@dimen/global_8dp"
-          style="@style/NormalTextView" />
+          style="@style/HeaderTextView" />
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/global_2dp"
+          android:layout_marginBottom="@dimen/global_8dp"
+          android:layout_marginLeft="@dimen/global_8dp"
+          android:layout_marginRight="@dimen/global_8dp"
+          android:background="@color/colorPink"/>
 
 
       <include
           layout="@layout/activity_home_part1" />
 
+     <!-- 2nd Part-->
       <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/contacts"
+          android:textColor="@color/colorWhite"
+          android:background="@color/colorPink"
+          android:gravity="center"
+          style="@style/HeaderTextView" />
+
+
+      <include
+          layout="@layout/activity_home_part2"
+         />
+
+<!--      <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/dashboard"
@@ -45,12 +68,10 @@
           android:layout_marginBottom="@dimen/global_2dp"
           android:layout_marginLeft="@dimen/global_8dp"
           android:layout_marginRight="@dimen/global_8dp"
-          android:background="@color/colorDarkBlue"/>
-
-
+          android:background="@color/colorDarkBlue"/>-->
 
       <include
-           layout="@layout/activity_home_part2" />
+          layout="@layout/activity_home_part3" />
 
 
    </LinearLayout>

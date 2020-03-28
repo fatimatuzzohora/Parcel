@@ -1,6 +1,8 @@
 package com.example.parcel.Activity;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.parcel.R;
 
@@ -21,6 +24,7 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     private RelativeLayout merchantProfile, merchantRequest;
+    private RelativeLayout call, msg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +34,13 @@ public class HomeActivity extends AppCompatActivity
 
         merchantProfile = findViewById(R.id.merchant_profile);
         merchantRequest = findViewById(R.id.merchant_request);
+        call = findViewById(R.id.call);
+        msg = findViewById(R.id.msg);
 
         merchantProfile.setOnClickListener(this);
         merchantRequest.setOnClickListener(this);
+        call.setOnClickListener(this);
+        msg.setOnClickListener(this);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -120,6 +128,38 @@ public class HomeActivity extends AppCompatActivity
             case R.id.merchant_request:
                 startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
                 break;
+
+
+            case R.id.call:
+                callHotline();
+                break;
+
+
+            case R.id.msg:
+                messenger();
+                break;
+
         }
+    }
+
+    public void callHotline(){
+        String phone = "01844000177";
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
+        startActivity(intent);
+    }
+
+    public void messenger(){
+        try
+        {
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://messaging/" + "100024317349345"));
+            startActivity(i);
+        }
+        catch (ActivityNotFoundException ex)
+        {
+            Toast.makeText(HomeActivity.this, "Oups!Can't open Facebook messenger right now. Please try again later.", Toast.LENGTH_SHORT).show();
+        }
+
+
+
     }
 }

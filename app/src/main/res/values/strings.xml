@@ -21,6 +21,7 @@
 
    <!--Home page:  Header line-->
     <string name="monthly_report">Monthly View</string>
+    <string name="contacts">Contacts</string>
     <string name="dashboard">Dashboard</string>
     <string name="report">Report</string>
 
@@ -35,6 +36,10 @@
     <string name="total">Total</string>
     <string name="demo_num">2020</string>
 
+
+    <!--Home Page Content Part - 3-->
+    <string name="call">Call</string>
+    <string name="msg">Messenger</string>
 
     <!--Merchant Profile-->
     <string name="gen_info">General Information</string>
