@@ -129,11 +129,9 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
                 break;
 
-
             case R.id.call:
                 callHotline();
                 break;
-
 
             case R.id.msg:
                 messenger();
@@ -143,7 +141,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     public void callHotline(){
-        String phone = "01844000177";
+        String phone = "01979-919107";
         Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
         startActivity(intent);
     }
@@ -151,7 +149,7 @@ public class HomeActivity extends AppCompatActivity
     public void messenger(){
         try
         {
-            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://messaging/" + "100024317349345"));
+            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://messaging/" + "101882344564923"));
             startActivity(i);
         }
         catch (ActivityNotFoundException ex)

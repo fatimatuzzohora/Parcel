@@ -12,7 +12,7 @@
         android:id="@+id/tb_mer_pro"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorBlue">
+        android:background="@color/colorPink">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,15 +26,12 @@
 
     </android.support.v7.widget.Toolbar>
 
-
-
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout_mer_pro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:tabIndicatorColor="@color/colorDarkBlue"
-            app:tabRippleColor="@color/colorBlue"
+            app:tabIndicatorColor="@color/colorDarkPink"
+            app:tabRippleColor="@color/colorPink"
             app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/colorPrimaryDark"
             app:tabTextColor="@android:color/black"

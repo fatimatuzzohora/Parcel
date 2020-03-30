@@ -13,7 +13,7 @@
         android:id="@+id/toolbar_mer_req"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorBlue">
+        android:background="@color/colorPink">
 
         <TextView
             android:id="@+id/toolbar_title_mer_req"
@@ -40,7 +40,7 @@
             android:layout_height="100dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/layout_border_blue">
+            android:background="@drawable/layout_border_pink">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
             android:layout_height="100dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/layout_border_blue">
+            android:background="@drawable/layout_border_pink">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
             android:layout_height="100dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/layout_border_blue">
+            android:background="@drawable/layout_border_pink">
 
             <TextView
                 android:layout_width="wrap_content"

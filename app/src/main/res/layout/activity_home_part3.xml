@@ -38,16 +38,26 @@
                 android:id="@+id/merchant_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:background="@drawable/layout_border_pink">
+
+                <ImageView
+                    android:id="@+id/pro_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_profile"
+                    />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/global_16dp"
+                    android:layout_marginStart="@dimen/global_16dp"
+                    android:layout_marginEnd="@dimen/global_8dp"
+                    android:layout_marginBottom="@dimen/global_8dp"
                     android:gravity="center"
                     android:text="@string/merchant_profile"
+                    android:layout_below="@+id/pro_img"
                     android:fontFamily="sans-serif-light"
-                    android:textColor="@color/colorDarkBlue"
+                    android:textColor="@color/colorPink"
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
@@ -67,15 +77,24 @@
                 android:id="@+id/merchant_request"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:background="@drawable/layout_border_pink">
+
+                <ImageView
+                    android:id="@+id/req_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_requisition" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/global_16dp"
+                    android:layout_below="@id/req_img"
+                    android:layout_marginStart="@dimen/global_16dp"
+                    android:layout_marginEnd="@dimen/global_8dp"
+                    android:layout_marginBottom="@dimen/global_8dp"
                     android:gravity="center"
                     android:text="@string/merchant_request"
-                    android:textColor="@color/colorDarkBlue"
+                    android:textColor="@color/colorPink"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="bold"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
@@ -91,7 +110,7 @@
 
 
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/global_8dp"
@@ -107,7 +126,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:background="@drawable/layout_border_pink">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -135,7 +154,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:background="@drawable/layout_border_pink">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -153,7 +172,7 @@
 
                  </android.support.v7.widget.CardView>
 
-            </LinearLayout>
+            </LinearLayout>-->
 
         </LinearLayout>
 

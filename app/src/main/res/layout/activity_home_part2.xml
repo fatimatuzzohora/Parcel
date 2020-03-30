@@ -21,10 +21,15 @@
             <RelativeLayout
                 android:id="@+id/call"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:layout_height="match_parent">
 
-                <TextView
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_call"
+                    android:layout_margin="@dimen/global_4dp"/>
+
+              <!--  <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/global_16dp"
@@ -33,7 +38,7 @@
                     android:textColor="@color/colorDarkBlue"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>-->
 
             </RelativeLayout>
 
@@ -49,20 +54,27 @@
 
             <RelativeLayout
                 android:id="@+id/msg"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/layout_border_blue">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/messenger"
+                    android:layout_margin="@dimen/global_8dp"/>
+<!--
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/global_16dp"
+                    android:layout_marginLeft="@dimen/global_16dp"
                     android:gravity="center"
                     android:text="@string/msg"
                     android:textColor="@color/colorDarkBlue"
                     android:fontFamily="sans-serif-light"
                     android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>-->
 
             </RelativeLayout>
 
