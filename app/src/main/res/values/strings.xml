@@ -12,6 +12,11 @@
 
     <string name="action_settings">Settings</string>
 
+    <!--Error String-->
+    <string name="error_msg">Please fill up the field</string>
+    <string name="net_error">Please Check your Internet Connection
+                                and Try again!</string>
+
 
     <!-- Home page-->
     <string name="merchant_profile">Merchant Profile</string>

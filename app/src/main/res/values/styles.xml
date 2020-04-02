@@ -34,17 +34,24 @@
         <!--<item name="android:drawablePadding">@dimen/global_16dp</item>-->
     </style>
 
+    <!-- Error color -->
+    <style name="InputError" parent="TextAppearance.Design.Error"/>
+    <style name="InputError.Yellow">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+       <!-- HeaderText style-->
     <style name="HeaderTextView" parent="TextAppearance.AppCompat.Headline">
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
+    <!--Normal Text Style-->
     <style name="NormalTextView" parent="TextAppearance.AppCompat.Body1">
-       <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
-
     </style>
 
     <style name="AppTheme.NoActionBar">

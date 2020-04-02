@@ -19,13 +19,14 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.parcel.R;
+import com.example.parcel.model.TempUserInfo;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     private RelativeLayout merchantProfile, merchantRequest;
     private RelativeLayout call, msg;
-
+    TempUserInfo tempUserInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,9 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        tempUserInfo = new TempUserInfo(this);
+
+        String id = tempUserInfo.getUserId();
 
         //FloatingActionButton fab = findViewById(R.id.fab);
       /*  fab.setOnClickListener(new View.OnClickListener() {
@@ -68,10 +72,15 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
+        }
+        else {
             super.onBackPressed();
         }
+
+
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
