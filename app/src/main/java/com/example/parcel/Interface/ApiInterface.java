@@ -1,5 +1,6 @@
 package com.example.parcel.Interface;
 
+import com.example.parcel.model.MonthlyView;
 import com.example.parcel.model.ObjectAuth;
 import com.example.parcel.model.ServerResponse;
 import com.google.gson.JsonObject;
@@ -32,9 +33,13 @@ public interface ApiInterface {
     Call<ObjectAuth> userSignIn(@Query("UserId") String userId,
                                 @Query("Password") String password);*/
 
-
-    @GET("login")
+    //Log in activity
+    @GET("api/login")
     Call<JsonObject> userSignIn(@Query("UserId") String userId,
                                 @Query("Password") String password);
+
+    //Monthly view for dashboard
+    @GET("Sales/Api/MerchantDashboard")
+    Call<MonthlyView> monthlyView(@Query("Id") String userId);
 
 }

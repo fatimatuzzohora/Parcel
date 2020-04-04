@@ -70,7 +70,8 @@
 
                     <!--Pick up Total-->
                        <TextView
-                           android:layout_width="wrap_content"
+                           android:id="@+id/totalPickup"
+                           android:layout_width="match_parent"
                            android:layout_height="@dimen/global_0dp"
                            android:layout_weight="1"
                            android:paddingLeft="@dimen/global_16dp"
@@ -78,7 +79,7 @@
                            android:gravity="center"
                            android:background="@color/colorLightPink"
                            android:textColor="@color/colorWhite"
-                           android:text="2016"
+                           android:text="20"
                            style="@style/NormalTextView"/>
 
                    </LinearLayout>
@@ -157,7 +158,8 @@
 
                         <!--Delivery Total-->
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:id="@+id/totalDelivery"
+                            android:layout_width="match_parent"
                             android:layout_height="@dimen/global_0dp"
                             android:layout_weight="1"
                             android:paddingLeft="@dimen/global_16dp"
@@ -165,7 +167,6 @@
                             android:gravity="center"
                             android:background="@color/colorLightPink"
                             android:textColor="@color/colorWhite"
-                            android:text="@string/demo_num"
                             style="@style/NormalTextView"/>
 
                     </LinearLayout>
@@ -260,7 +261,8 @@
 
                         <!--On process Total-->
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:id="@+id/totalOnProcess"
+                            android:layout_width="match_parent"
                             android:layout_height="@dimen/global_0dp"
                             android:layout_weight="1"
                             android:paddingLeft="@dimen/global_16dp"
@@ -268,7 +270,6 @@
                             android:gravity="center"
                             android:background="@color/colorLightPink"
                             android:textColor="@color/colorWhite"
-                            android:text="2016"
                             style="@style/NormalTextView"/>
 
                     </LinearLayout>
@@ -350,7 +351,8 @@
 
                         <!--Cancel Total-->
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:id="@+id/totalCancel"
+                            android:layout_width="match_parent"
                             android:layout_height="@dimen/global_0dp"
                             android:layout_weight="1"
                             android:paddingLeft="@dimen/global_16dp"
@@ -358,7 +360,6 @@
                             android:gravity="center"
                             android:background="@color/colorLightPink"
                             android:textColor="@color/colorWhite"
-                            android:text="@string/demo_num"
                             style="@style/NormalTextView"/>
 
 

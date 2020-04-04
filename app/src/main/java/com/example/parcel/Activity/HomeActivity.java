@@ -1,9 +1,12 @@
 package com.example.parcel.Activity;
 
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,22 +19,39 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.parcel.Interface.ApiInterface;
 import com.example.parcel.R;
+import com.example.parcel.model.ApiClient;
+import com.example.parcel.model.MonthlyView;
 import com.example.parcel.model.TempUserInfo;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
+    private TextView totalPickup,totalDelivery,totalOnProcess,totalCancel;
     private RelativeLayout merchantProfile, merchantRequest;
     private RelativeLayout call, msg;
     TempUserInfo tempUserInfo;
+    private ApiInterface apiInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.tb_home);
+
+        //monthlyViewInformation
+        totalPickup = findViewById(R.id.totalPickup);
+        totalDelivery = findViewById(R.id.totalDelivery);
+        totalOnProcess = findViewById(R.id.totalOnProcess);
+        totalCancel = findViewById(R.id.totalCancel);
 
         merchantProfile = findViewById(R.id.merchant_profile);
         merchantRequest = findViewById(R.id.merchant_request);
@@ -46,9 +66,14 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
+        // Network call
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
+
         tempUserInfo = new TempUserInfo(this);
 
         String id = tempUserInfo.getUserId();
+
+        monthlyView(id);
 
         //FloatingActionButton fab = findViewById(R.id.fab);
       /*  fab.setOnClickListener(new View.OnClickListener() {
@@ -69,18 +94,59 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+      /*  DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         }
         else {
             super.onBackPressed();
-        }
+        }*/
 
+        diaExitFromApp();
 
 
     }
+    private void diaExitFromApp(){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.exit);
+        builder.setMessage(R.string.exit_msg);
+        builder.setPositiveButton(R.string.no, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton(R.string.yes, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                finishAffinity();
+                HomeActivity.super.onBackPressed();
+            }
+        });
+        builder.show();
+    }
 
+    private void monthlyView(String userId){
+        Call<MonthlyView>call = apiInterface.monthlyView(userId);
+
+        call.enqueue(new Callback<MonthlyView>() {
+            @Override
+            public void onResponse(Call<MonthlyView> call, Response<MonthlyView> response) {
+                if(response.isSuccessful() && response.body() != null){
+                    MonthlyView monthlyView = response.body();
+                    totalPickup.setText(monthlyView.getTotalPickup());
+                    totalDelivery.setText(monthlyView.getTotalDelivery());
+
+                    Log.d("pickup",monthlyView.getTotalPickup());
+
+                }
+                else Toast.makeText(HomeActivity.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onFailure(Call<MonthlyView> call, Throwable t) {
+                Toast.makeText(HomeActivity.this, getResources().getText(R.string.net_error), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

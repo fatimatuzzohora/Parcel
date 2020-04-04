@@ -17,6 +17,11 @@
     <string name="net_error">Please Check your Internet Connection
                                 and Try again!</string>
 
+   <!-- Extra String-->
+    <string name="exit">Exit</string>
+    <string name="exit_msg">Do you want to exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
     <!-- Home page-->
     <string name="merchant_profile">Merchant Profile</string>
