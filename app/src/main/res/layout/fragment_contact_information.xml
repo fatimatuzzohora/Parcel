@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/global_32dp"
+    android:layout_margin="@dimen/global_16dp"
     tools:context=".Fragment.ContactInfoFragment">
 
 
@@ -25,6 +25,7 @@
 
 
             <TextView
+                android:id="@+id/contactName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Md. Rubel Hossen"
@@ -54,6 +55,7 @@
 
 
         <TextView
+            android:id="@+id/contactPersonPosition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Manager"
@@ -83,6 +85,7 @@
 
 
         <TextView
+            android:id="@+id/contactNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01711939209"
@@ -112,6 +115,7 @@
 
 
         <TextView
+            android:id="@+id/contactEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="rubel@gmail.com"

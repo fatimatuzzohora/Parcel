@@ -13,9 +13,10 @@
     <string name="action_settings">Settings</string>
 
     <!--Error String-->
-    <string name="error_msg">Please fill up the field</string>
-    <string name="net_error">Please Check your Internet Connection
-                                and Try again!</string>
+    <string name="error_msg">Please Fill Up The Field</string>
+    <string name="net_error">Please Check Your Internet Connection
+                                and Try Again!</string>
+    <string name="try_again">Try Again</string>
 
    <!-- Extra String-->
     <string name="exit">Exit</string>
@@ -83,6 +84,7 @@
 
 
     <string name="payment_mode">Payment Mode : </string>
+    <string name="bank_name">Bank Name</string>
     <string name="bank_no">Bank A/C No : </string>
     <string name="bank_branch">Bank Branch/Address : </string>
     <string name="bkash">Bkash No : </string>

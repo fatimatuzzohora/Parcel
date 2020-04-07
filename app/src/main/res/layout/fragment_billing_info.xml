@@ -26,6 +26,7 @@
 
 
         <TextView
+            android:id="@+id/payment_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cash"
@@ -37,6 +38,40 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     </TableRow>
+
+    <!--Bank Account Name-->
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bank_name"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+
+        <TextView
+            android:id="@+id/bank_ac_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_margin="@dimen/global_4dp"
+            android:padding="@dimen/global_4dp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="normal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </TableRow>
+
+
+
+
+
 
             <!--Bank Account number-->
     <TableRow>
@@ -54,6 +89,7 @@
 
 
         <TextView
+            android:id="@+id/bank_ac_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
@@ -82,6 +118,7 @@
 
 
         <TextView
+            android:id="@+id/bank_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
@@ -111,6 +148,7 @@
 
 
         <TextView
+            android:id="@+id/bkash_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
@@ -140,6 +178,7 @@
 
 
         <TextView
+            android:id="@+id/rocket_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""

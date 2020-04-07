@@ -133,12 +133,9 @@ public class HomeActivity extends AppCompatActivity
                 if(response.isSuccessful() && response.body() != null){
                     MonthlyView monthlyView = response.body();
                     totalPickup.setText(monthlyView.getTotalPickup());
-                    totalDelivery.setText(monthlyView.getTotalDelivery());
-
-                    Log.d("pickup",monthlyView.getTotalPickup());
-
+                    totalOnProcess.setText(monthlyView.getOnProcess());
+                    totalDelivery.setText(monthlyView.getTotalDeliverDone());
                 }
-                else Toast.makeText(HomeActivity.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
             }
 
             @Override

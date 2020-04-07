@@ -1,5 +1,9 @@
 package com.example.parcel.Interface;
 
+import com.example.parcel.model.BillingInformation;
+import com.example.parcel.model.BusinessInformation;
+import com.example.parcel.model.ContactInformation;
+import com.example.parcel.model.MerchantInformation;
 import com.example.parcel.model.MonthlyView;
 import com.example.parcel.model.ObjectAuth;
 import com.example.parcel.model.ServerResponse;
@@ -38,8 +42,29 @@ public interface ApiInterface {
     Call<JsonObject> userSignIn(@Query("UserId") String userId,
                                 @Query("Password") String password);
 
+    //Dashboard Activity...........
+
     //Monthly view for dashboard
     @GET("Sales/Api/MerchantDashboard")
     Call<MonthlyView> monthlyView(@Query("Id") String userId);
+
+    //Merchant Profile Activity...........
+
+    //Merchant Profile Information
+    @GET("Sales/Api/MerchantProfile")
+    Call<MerchantInformation> merchantProfileInfo(@Query("Id") String userId);
+
+    //Contact Information Information
+    @GET("Sales/Api/MerchantProfile")
+    Call<ContactInformation> contactInfo(@Query("Id") String userId);
+
+    //Billing Information Information
+    @GET("Sales/Api/MerchantProfile")
+    Call<BillingInformation> billingInfo(@Query("Id") String userId);
+
+
+    //Business Information Information
+    @GET("Sales/Api/MerchantProfile")
+    Call<BusinessInformation> businessInfo(@Query("Id") String userId);
 
 }

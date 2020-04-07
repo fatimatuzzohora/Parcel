@@ -5,17 +5,28 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import com.example.parcel.Adapter.AdapterPager;
 import com.example.parcel.Fragment.BillingInfoFragment;
 import com.example.parcel.Fragment.BusinessInfoFragment;
 import com.example.parcel.Fragment.ContactInfoFragment;
 import com.example.parcel.Fragment.MerchantInfoFragment;
+import com.example.parcel.Interface.ApiInterface;
 import com.example.parcel.R;
+import com.example.parcel.model.ApiClient;
+import com.example.parcel.model.MerchantInformation;
+import com.example.parcel.model.TempUserInfo;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MerchantProfileActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +36,6 @@ public class MerchantProfileActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-
-        //hide the toolbar....
-        //getSupportActionBar().hide();
 
 
         //id initialize......
@@ -58,4 +65,5 @@ public class MerchantProfileActivity extends AppCompatActivity {
         viewPager.setAdapter(adapterPager);
 
     }
+
 }

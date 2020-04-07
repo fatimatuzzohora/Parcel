@@ -79,7 +79,6 @@
                            android:gravity="center"
                            android:background="@color/colorLightPink"
                            android:textColor="@color/colorWhite"
-                           android:text="20"
                            style="@style/NormalTextView"/>
 
                    </LinearLayout>

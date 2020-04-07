@@ -11,7 +11,7 @@ public class MonthlyView {
     private String totalOfficeReceive;
 
     @SerializedName("TotalDelivery")
-    private String totalDelivery;
+    private String onProcess;
 
     @SerializedName("TotalDeliveryComplete")
     private String totalDeliverDone;
@@ -25,14 +25,6 @@ public class MonthlyView {
     public MonthlyView() {
     }
 
-    public MonthlyView(String totalPickup, String totalOfficeReceive, String totalDelivery, String totalDeliverDone, String totalBillProcess, String totalBillAmount) {
-        this.totalPickup = totalPickup;
-        this.totalOfficeReceive = totalOfficeReceive;
-        this.totalDelivery = totalDelivery;
-        this.totalDeliverDone = totalDeliverDone;
-        this.totalBillProcess = totalBillProcess;
-        this.totalBillAmount = totalBillAmount;
-    }
 
     public String getTotalPickup() {
         return totalPickup;
@@ -42,8 +34,8 @@ public class MonthlyView {
         return totalOfficeReceive;
     }
 
-    public String getTotalDelivery() {
-        return totalDelivery;
+    public String getOnProcess() {
+        return onProcess;
     }
 
     public String getTotalDeliverDone() {

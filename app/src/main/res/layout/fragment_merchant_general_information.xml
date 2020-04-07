@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/global_16dp"
     tools:context=".Fragment.MerchantInfoFragment">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/global_16dp">
+
 
        <!-- Merchant Name-->
     <TableRow>
@@ -24,6 +29,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Maksudur Rahman"
@@ -54,6 +60,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_phn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="01711939209"
@@ -83,6 +90,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="maksudur@gmail.com"
@@ -112,6 +120,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_trade_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1234567890"
@@ -141,6 +150,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_post_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1216"
@@ -170,6 +180,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Mirpur, Dhaka"
@@ -199,6 +210,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_mailing_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="447, Senpara Parbata, Mirpur, Dhaka"
@@ -228,6 +240,7 @@
 
 
         <TextView
+            android:id="@+id/merchant_permanent_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="447, Senpara Parbata, Mirpur, Dhaka"
@@ -240,4 +253,6 @@
 
     </TableRow>
 
-</TableLayout>
+    </TableLayout>
+
+</ScrollView>
