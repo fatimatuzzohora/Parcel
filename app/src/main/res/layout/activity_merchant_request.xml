@@ -37,6 +37,72 @@
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/service_name"
+                    android:padding="@dimen/global_4dp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    />
+
+                <Spinner
+                    android:id="@+id/sp_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/global_4dp"
+                    android:entries="@array/service_arrays"
+                    style="@style/customSpinnerStyle"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/district_name"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    />
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/global_4dp"
+                    android:entries="@array/service_arrays" />
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+      <!--  <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="vertical"
             android:gravity="center">
@@ -59,7 +125,7 @@
                 android:entries="@array/service_arrays" />
 
 
-        </LinearLayout>
+        </LinearLayout>-->
 
     </android.support.v7.widget.CardView>
 

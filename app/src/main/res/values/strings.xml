@@ -18,7 +18,7 @@
                                 and Try Again!</string>
     <string name="try_again">Try Again</string>
 
-   <!-- Extra String-->
+    <!-- Extra String-->
     <string name="exit">Exit</string>
     <string name="exit_msg">Do you want to exit?</string>
     <string name="yes">Yes</string>
@@ -30,7 +30,7 @@
     <string name="pick_up_report">Pick Up Report</string>
     <string name="parcel_return_report">Parcel Return Report</string>
 
-   <!--Home page:  Header line-->
+    <!--Home page:  Header line-->
     <string name="monthly_report">Monthly View</string>
     <string name="contacts">Contacts</string>
     <string name="dashboard">Dashboard</string>
@@ -89,7 +89,6 @@
     <string name="bank_branch">Bank Branch/Address : </string>
     <string name="bkash">Bkash No : </string>
     <string name="rocket">Rocket No : </string>
-
 
 
     <!--Merchant Requisition-->

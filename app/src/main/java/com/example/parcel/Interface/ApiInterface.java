@@ -23,24 +23,25 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-
    /* @GET("login")
     Call<ServerResponse> userSignIn(@FieldMap Map<String, String> userAuth);*/
-
-
- /*   @GET("login")
-    Call<ServerResponse> userSignIn(@Query("UserId") String userId,
-                                    @Query("Password") String password);*/
 
 
  /*   @GET("login")
     Call<ObjectAuth> userSignIn(@Query("UserId") String userId,
                                 @Query("Password") String password);*/
 
-    //Log in activity
-    @GET("api/login")
+ /*   @GET("api/login")
     Call<JsonObject> userSignIn(@Query("UserId") String userId,
-                                @Query("Password") String password);
+                                @Query("Password") String password);*/
+
+
+
+    //Log in activity
+    @POST("api/login")
+    Call<ServerResponse> userSignIn(@Query("UserId") String userId,
+                                    @Query("Password") String password);
+
 
     //Dashboard Activity...........
 

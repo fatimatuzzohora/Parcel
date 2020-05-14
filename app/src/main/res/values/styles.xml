@@ -54,6 +54,13 @@
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>
 
+    <style name="customSpinnerStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/colorPink</item>
+    </style>
+
+
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.parcel">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name = "android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -14,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".Activity.MerchantRequestActivity"></activity>
+        <activity android:name=".Activity.MerchantBillingActivity"></activity>
+        <activity android:name=".Activity.MerchantRequestActivity" />
         <activity android:name=".Activity.MerchantProfileActivity" />
         <activity
             android:name=".Activity.HomeActivity"

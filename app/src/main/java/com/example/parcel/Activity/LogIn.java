@@ -68,7 +68,46 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
     }
 
-    //API Network call
+    //API Network Call
+    private void signIn(){
+        Call<ServerResponse>call =apiInterface.userSignIn(userId.getText().toString(), password.getText().toString());
+
+        call.enqueue(new Callback<ServerResponse>() {
+            @Override
+            public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
+
+                try {
+                    if (response.isSuccessful() && response.body() != null) {
+                        ServerResponse serverResponse = response.body();
+
+                        String msg = serverResponse.getMessage();
+                        Toast.makeText(LogIn.this, "Success" + msg, Toast.LENGTH_SHORT).show();
+
+                        String userId = serverResponse.getId();
+                        tempUserInfo.saveTempUserValue(userId);
+                        startActivity(new Intent(LogIn.this, HomeActivity.class));
+                        }
+                }
+                catch (Exception ex){
+                    Toast.makeText(LogIn.this, "not success "+ex, Toast.LENGTH_SHORT).show();
+                    Log.d("error", String.valueOf(ex));
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ServerResponse> call, Throwable t) {
+                Toast.makeText(LogIn.this, "Failed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+
+
+
+
+/*    //API Network call
    private void signIn() {
 
        Call<JsonObject> call = apiInterface.userSignIn(userId.getText().toString(), password.getText().toString());
@@ -98,7 +137,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
            }
        });
 
-   }
+   }*/
 
 /* private void signIn(){
      Call<ObjectAuth>call = apiInterface.userSignIn(userId.getText().toString(),password.getText().toString());
