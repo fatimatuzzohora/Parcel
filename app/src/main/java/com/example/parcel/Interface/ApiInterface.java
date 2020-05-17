@@ -1,6 +1,7 @@
 package com.example.parcel.Interface;
 
 import com.example.parcel.model.BillingInformation;
+import com.example.parcel.model.BillingReport;
 import com.example.parcel.model.BusinessInformation;
 import com.example.parcel.model.ContactInformation;
 import com.example.parcel.model.MerchantInformation;
@@ -10,6 +11,7 @@ import com.example.parcel.model.ServerResponse;
 import com.google.gson.JsonObject;
 
 
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -67,5 +69,12 @@ public interface ApiInterface {
     //Business Information Information
     @GET("Sales/Api/MerchantProfile")
     Call<BusinessInformation> businessInfo(@Query("Id") String userId);
+
+    //Merchant Billing Report
+    @GET("Sales/Api/MerchantBill")
+    Call<List<BillingReport>> billingReport (@Query("Id") String userId,
+                                             @Query("StartDate") String startDate,
+                                             @Query("EndDate") String endDate);
+
 
 }

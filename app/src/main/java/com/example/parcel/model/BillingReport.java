@@ -35,10 +35,10 @@ public class BillingReport {
     private String transactionDate;
 
     @SerializedName("DeliveryAddress")
-    private String deliveryAddress;
+    private String customerAddress;
 
     @SerializedName("SaleRate")
-    private String saleRate;
+    private String merchantBill;
 
     @SerializedName("DeliveryCharge")
     private String deliveryCharge;
@@ -47,7 +47,7 @@ public class BillingReport {
     private String codCharge;
 
     @SerializedName("Bill")
-    private String bill;
+    private String parcelValue;
 
     @SerializedName("CustomerName")
     private String customerName;
@@ -55,11 +55,24 @@ public class BillingReport {
     @SerializedName("BillStatus")
     private String billStatus;
 
-    @SerializedName("CustomerMobile")
+    @SerializedName("CutomerMobile")
     private String customerMobile;
 
     @SerializedName("ItemName")
     private String itemName;
+
+
+    public BillingReport(String deliveryStatus, String customerAddress, String merchantBill, String deliveryCharge, String codCharge, String parcelValue, String customerName, String billStatus, String customerMobile) {
+        this.deliveryStatus = deliveryStatus;
+        this.customerAddress = customerAddress;
+        this.merchantBill = merchantBill;
+        this.deliveryCharge = deliveryCharge;
+        this.codCharge = codCharge;
+        this.parcelValue = parcelValue;
+        this.customerName = customerName;
+        this.billStatus = billStatus;
+        this.customerMobile = customerMobile;
+    }
 
     public String getFullName() {
         return fullName;
@@ -101,12 +114,12 @@ public class BillingReport {
         return transactionDate;
     }
 
-    public String getDeliveryAddress() {
-        return deliveryAddress;
+    public String getCustomerAddress() {
+        return customerAddress;
     }
 
-    public String getSaleRate() {
-        return saleRate;
+    public String getMerchantBill() {
+        return merchantBill;
     }
 
     public String getDeliveryCharge() {
@@ -117,8 +130,8 @@ public class BillingReport {
         return codCharge;
     }
 
-    public String getBill() {
-        return bill;
+    public String getParcelValue() {
+        return parcelValue;
     }
 
     public String getCustomerName() {

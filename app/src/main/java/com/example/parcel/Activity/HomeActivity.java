@@ -180,7 +180,7 @@ public class HomeActivity extends AppCompatActivity
             startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
         }
         else if (id == R.id.nav_pick_up) {
-
+            startActivity(new Intent(HomeActivity.this,MerchantBillingActivity.class));
         } else if (id == R.id.nav_parcel) {
 
         }

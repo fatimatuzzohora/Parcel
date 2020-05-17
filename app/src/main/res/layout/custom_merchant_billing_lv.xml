@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/global_4dp">
+
+    <LinearLayout
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/global_4dp">
+
+        <TextView
+            android:id="@+id/br_cus_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Abdul Rahman"
+            android:gravity="center"
+            android:textColor="@color/colorPink"/>
+
+        <TextView
+            android:id="@+id/br_cus_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="447, Senpara Parbata, Mirpur, Dhaka"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/br_cus_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/global_8dp"
+            android:text="01930367400"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/br_parcel_value"
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="630tk"
+        android:gravity="center"
+        android:padding="@dimen/global_2dp"/>
+
+
+    <TextView
+        android:id="@+id/br_cod_charge"
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="20tk"
+        android:gravity="center"
+        android:padding="@dimen/global_2dp"/>
+
+    <TextView
+        android:id="@+id/br_service_charge"
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="10tk"
+        android:gravity="center"
+        android:padding="@dimen/global_2dp"/>
+
+    <TextView
+        android:id="@+id/br_merchant_bill"
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="600tk"
+        android:gravity="center"
+        android:padding="@dimen/global_2dp"/>
+
+
+    <LinearLayout
+        android:layout_width="@dimen/global_0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/br_payment_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_0dp"
+            android:layout_weight="1"
+            android:text="Paid"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/br_delivery_status"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/global_0dp"
+            android:layout_weight="1"
+            android:text="Delivered"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
