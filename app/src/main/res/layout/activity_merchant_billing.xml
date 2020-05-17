@@ -8,11 +8,140 @@
     android:orientation="vertical"
     tools:context=".Activity.MerchantBillingActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPink">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/merchant_billing"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_margin="@dimen/global_4dp"
+                style="@style/NormalTextView"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:padding="@dimen/global_4dp"
+                android:layout_marginLeft="@dimen/global_16dp"
+                android:layout_marginRight="@dimen/global_16dp"
+                style="@style/NormalTextView"/>
+
+            <EditText
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_margin="@dimen/global_4dp"
+                style="@style/NormalTextView"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@android:drawable/ic_menu_search"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/personal_information"
+                style="@style/NormalTextView"/>
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/parcel_value"
+                style="@style/NormalTextView"/>
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cod_charge"
+                style="@style/NormalTextView"/>
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/service_charge"
+                style="@style/NormalTextView"/>
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/merchant_bill"
+                style="@style/NormalTextView"/>
+
+
+            <TextView
+                android:layout_width="@dimen/global_0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/status"
+                style="@style/NormalTextView"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <!--/*ListView for data ...*/-->
     <ListView
         android:id="@+id/billing_report_LV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/global_4dp"/>
 
 
 

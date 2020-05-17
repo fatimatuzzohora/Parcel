@@ -179,7 +179,7 @@ public class HomeActivity extends AppCompatActivity
         else if (id == R.id.nav_mer_req) {
             startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
         }
-        else if (id == R.id.nav_pick_up) {
+        else if (id == R.id.nav_mer_bill) {
             startActivity(new Intent(HomeActivity.this,MerchantBillingActivity.class));
         } else if (id == R.id.nav_parcel) {
 
@@ -226,7 +226,7 @@ public class HomeActivity extends AppCompatActivity
         }
         catch (ActivityNotFoundException ex)
         {
-            Toast.makeText(HomeActivity.this, "Oups!Can't open Facebook messenger right now. Please try again later.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(HomeActivity.this, "Ops!Can't open Facebook messenger right now. Please try again later.", Toast.LENGTH_SHORT).show();
         }
 
 

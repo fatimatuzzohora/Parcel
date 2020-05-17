@@ -42,17 +42,28 @@
 
        <!-- HeaderText style-->
     <style name="HeaderTextView" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">normal</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
     <!--Normal Text Style-->
     <style name="NormalTextView" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:padding">@dimen/global_4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>
+
+    <!--Normal Text Style-->
+    <style name="ParagraphTextView" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+    </style>
+
+
+
 
     <style name="customSpinnerStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
         <item name="android:textSize">42sp</item>

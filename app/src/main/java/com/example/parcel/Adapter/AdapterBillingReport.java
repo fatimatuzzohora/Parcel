@@ -75,10 +75,10 @@ public class AdapterBillingReport extends ArrayAdapter<BillingReport> {
         holder.cusAddress.setText(billingReport.getCustomerAddress());
         holder.cusMobile.setText(billingReport.getCustomerMobile());
 
-        holder.parcelValue.setText(billingReport.getParcelValue());
-        holder.codCharge.setText(billingReport.getCodCharge());
-        holder.serviceCharge.setText(billingReport.getDeliveryCharge());
-        holder.merchantBill.setText(billingReport.getMerchantBill());
+        holder.parcelValue.setText(decimalFormat(Double.parseDouble(billingReport.getParcelValue())));
+        holder.codCharge.setText(decimalFormat(Double.parseDouble(billingReport.getCodCharge())));
+        holder.serviceCharge.setText(decimalFormat(Double.parseDouble(billingReport.getDeliveryCharge())));
+        holder.merchantBill.setText(decimalFormat(Double.parseDouble(billingReport.getMerchantBill())));
 
         holder.deliveryStatus.setText(billingReport.getDeliveryStatus());
         holder.paymentStatus.setText(billingReport.getBillStatus());
