@@ -14,6 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPink">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -38,10 +39,14 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/start_date_ET"
                 android:layout_width="@dimen/global_0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:layout_margin="@dimen/global_4dp"
+                android:gravity="center"
+                android:padding="@dimen/global_8dp"
+                android:hint="@string/start_date"
                 style="@style/NormalTextView"/>
 
             <TextView
@@ -54,14 +59,19 @@
                 style="@style/NormalTextView"/>
 
             <EditText
+                android:id="@+id/end_date_ET"
                 android:layout_width="@dimen/global_0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:layout_margin="@dimen/global_4dp"
+                android:gravity="center"
+                android:padding="@dimen/global_8dp"
+                android:hint="@string/end_date"
                 style="@style/NormalTextView"/>
 
 
             <ImageView
+                android:id="@+id/search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"

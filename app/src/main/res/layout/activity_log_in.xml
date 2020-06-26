@@ -48,15 +48,32 @@
             android:inputType="textPassword"
             style="@style/EditText"/>
 
-        <!--Sign in Button-->
-        <Button
-            android:id="@+id/sign_in"
-            android:layout_width="wrap_content"
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sign_in"
-            android:layout_margin="16dp"
-            android:layout_gravity="right"
-            style="@style/Button"/>
+            android:layout_margin="@dimen/global_16dp">
+
+            <ProgressBar
+                android:id="@+id/login_pb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/global_16dp"
+                android:visibility="gone" />
+
+            <!--Sign in Button-->
+            <Button
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:layout_margin="16dp"
+                android:layout_alignParentEnd="true"
+                style="@style/Button"/>
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

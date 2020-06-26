@@ -179,6 +179,9 @@ public class HomeActivity extends AppCompatActivity
         else if (id == R.id.nav_mer_req) {
             startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
         }
+        else if(id == R.id.nav_mer_product){
+            startActivity(new Intent(HomeActivity.this, ProductActivity.class));
+        }
         else if (id == R.id.nav_mer_bill) {
             startActivity(new Intent(HomeActivity.this,MerchantBillingActivity.class));
         } else if (id == R.id.nav_parcel) {

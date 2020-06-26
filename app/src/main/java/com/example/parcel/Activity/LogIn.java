@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.parcel.model.ApiClient;
@@ -29,6 +30,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     private Button signInBtn;
     private EditText userId, password;
 
+    private ProgressBar progressBar;
+
     private HashMap<String, String> userAuth = new HashMap<>();
 
     private ApiInterface apiInterface;
@@ -43,6 +46,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         signInBtn = findViewById(R.id.sign_in);
         userId = findViewById(R.id.user_id);
         password= findViewById(R.id.password);
+        progressBar= findViewById(R.id.login_pb);
+
 
         // Network call
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
@@ -58,11 +63,18 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.sign_in :
+                progressBar.setVisibility(View.VISIBLE);
                 if (Validation.editTextValidation(userId, String.valueOf(R.string.error_msg))
                         && Validation.editTextValidation(password, getResources().getString(R.string.error_msg))) {
+
+                            signInBtn.setVisibility(View.INVISIBLE);
                             //Login method calls.....
                             signIn();
                         }
+                else {
+                    progressBar.setVisibility(View.GONE);
+                    Toast.makeText(this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
 
@@ -70,36 +82,46 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
     //API Network Call
     private void signIn(){
+        try {
         Call<ServerResponse>call =apiInterface.userSignIn(userId.getText().toString(), password.getText().toString());
 
         call.enqueue(new Callback<ServerResponse>() {
             @Override
             public void onResponse(Call<ServerResponse> call, Response<ServerResponse> response) {
 
-                try {
                     if (response.isSuccessful() && response.body() != null) {
+                        //the progressbar is now gone...
+                        progressBar.setVisibility(View.GONE);
+
                         ServerResponse serverResponse = response.body();
 
-                        String msg = serverResponse.getMessage();
-                        Toast.makeText(LogIn.this, "Success" + msg, Toast.LENGTH_SHORT).show();
-
-                        String userId = serverResponse.getId();
-                        tempUserInfo.saveTempUserValue(userId);
-                        startActivity(new Intent(LogIn.this, HomeActivity.class));
+                        if(serverResponse.getMessage().equals("true")){
+                            //save the id in shared preference....
+                            String userId = serverResponse.getId();
+                            tempUserInfo.saveTempUserValue(userId);
+                            startActivity(new Intent(LogIn.this, HomeActivity.class));
                         }
-                }
-                catch (Exception ex){
-                    Toast.makeText(LogIn.this, "not success "+ex, Toast.LENGTH_SHORT).show();
-                    Log.d("error", String.valueOf(ex));
-                }
+                        else if (serverResponse.getMessage().equals("false")){
+                            signInBtn.setVisibility(View.VISIBLE);
+                            Toast.makeText(LogIn.this, getResources().getString(R.string.invalid), Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
             }
 
             @Override
             public void onFailure(Call<ServerResponse> call, Throwable t) {
-                Toast.makeText(LogIn.this, "Failed", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+                signInBtn.setVisibility(View.VISIBLE);
+                Toast.makeText(LogIn.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
         });
-
+        }
+        catch (Exception ex){
+            progressBar.setVisibility(View.GONE);
+            signInBtn.setVisibility(View.VISIBLE);
+            Toast.makeText(LogIn.this, getResources().getString(R.string.try_again), Toast.LENGTH_SHORT).show();
+        }
 
     }
 

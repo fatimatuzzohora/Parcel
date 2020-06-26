@@ -13,6 +13,11 @@
             android:icon="@mipmap/ic_requisition"
             android:title="@string/merchant_request" />
 
+        <item
+            android:id="@+id/nav_mer_product"
+            android:icon="@mipmap/ic_requisition"
+            android:title="@string/product" />
+
     </group>
 
     <item android:title="@string/report">

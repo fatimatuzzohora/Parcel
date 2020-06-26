@@ -98,6 +98,7 @@
             android:layout_weight="1"
             android:text="Paid"
             android:textColor="@android:color/white"
+            android:textStyle="bold"
             android:gravity="center"
             android:background="@android:color/holo_orange_light"
             style="@style/ParagraphTextView"/>
@@ -108,6 +109,7 @@
             android:layout_height="@dimen/global_0dp"
             android:layout_weight="1"
             android:text="Delivered"
+            android:textStyle="bold"
             android:gravity="center"
             android:background="@android:color/holo_green_light"
             style="@style/ParagraphTextView"/>

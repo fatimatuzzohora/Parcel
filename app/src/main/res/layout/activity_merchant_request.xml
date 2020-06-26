@@ -38,175 +38,147 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="@dimen/global_0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="@dimen/global_0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/service_name"
-                    android:padding="@dimen/global_4dp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-light"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    />
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
-                <Spinner
-                    android:id="@+id/sp_service"
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_name"
+                        android:padding="@dimen/global_4dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <Spinner
+                        android:id="@+id/sp_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/global_4dp"
+                        style="@style/customSpinnerStyle"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/global_0dp"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/global_4dp"
-                    android:entries="@array/service_arrays"
-                    style="@style/customSpinnerStyle"/>
+                    android:orientation="vertical"
+                    android:layout_weight="1">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/district_name"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:padding="@dimen/global_4dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <Spinner
+                        android:id="@+id/sp_district"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/global_4dp" />
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-
             <LinearLayout
-                android:layout_width="@dimen/global_0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="@dimen/global_0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/district_name"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-light"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    />
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
 
-                <Spinner
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deliver_person"
+                        android:padding="@dimen/global_4dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <Spinner
+                        android:id="@+id/sp_delivery_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/global_4dp"
+                        style="@style/customSpinnerStyle"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/global_0dp"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/global_4dp"
-                    android:entries="@array/service_arrays" />
+                    android:orientation="vertical"
+                    android:layout_weight="1">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:padding="@dimen/global_4dp"
+                        android:fontFamily="sans-serif-light"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        />
+
+                    <EditText
+                        android:id="@+id/date_ET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_marginStart="@dimen/global_16dp"
+                        android:layout_marginEnd="@dimen/global_16dp"
+                        android:gravity="center"
+                        android:padding="@dimen/global_8dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-
-
-
         </LinearLayout>
 
 
-
-
-      <!--  <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/service_name"
-                android:padding="@dimen/global_4dp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                />
-
-            <Spinner
-                android:id="@+id/sp_service"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/global_4dp"
-                android:entries="@array/service_arrays" />
-
-
-        </LinearLayout>-->
-
     </android.support.v7.widget.CardView>
 
-
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/global_16dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="@dimen/global_16dp"
-        app:cardElevation="@dimen/global_32dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/layout_border_pink">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/district_name"
-                android:padding="@dimen/global_4dp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/global_4dp"
-                android:entries="@array/district_arrays" />
-
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/global_16dp"
-        android:layout_gravity="center"
-        app:cardCornerRadius="@dimen/global_16dp"
-        app:cardElevation="@dimen/global_32dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:background="@drawable/layout_border_pink">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/deliver_person"
-                android:padding="@dimen/global_4dp"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-light"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/global_4dp"
-                android:entries="@array/delivery_arrays" />
-
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
 
     <Button
-        android:layout_width="match_parent"
+        android:id="@+id/mer_req_btn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/show_list"
+        android:text="@string/save"
         android:layout_gravity="center"
         android:layout_margin="@dimen/global_16dp"
         style="@style/Button"/>

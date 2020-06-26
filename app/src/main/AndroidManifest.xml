@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.MerchantBillingActivity"></activity>
+        <activity android:name=".Activity.ProductActivity"></activity>
+        <activity android:name=".Activity.MerchantBillingActivity" />
         <activity android:name=".Activity.MerchantRequestActivity" />
         <activity android:name=".Activity.MerchantProfileActivity" />
         <activity

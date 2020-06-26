@@ -17,6 +17,7 @@
     <string name="net_error">Please Check Your Internet Connection
                                 and Try Again!</string>
     <string name="try_again">Try Again</string>
+    <string name="invalid">Invalid Username or Password</string>
 
     <!-- Extra String-->
     <string name="exit">Exit</string>
@@ -27,6 +28,7 @@
     <!-- Home page-->
     <string name="merchant_profile">Merchant Profile</string>
     <string name="merchant_request">Merchant Request</string>
+    <string name="product">Product</string>
     <string name="pick_up_report">Pick Up Report</string>
     <string name="parcel_return_report">Parcel Return Report</string>
 
@@ -96,44 +98,32 @@
     <string name="district_name">District Name</string>
     <string name="deliver_person">Delivery Person</string>
     <string name="delivery_date">Delivery Date</string>
-    <string name="show_list">Show List</string>
+    <string name="save">Save</string>
+    <string name="date">Date</string>
+    
+    
+  <!--  Product  -->
+    <string name="pro_config">Product Configuration</string>
+    <string name="pro_name">Prodct Name</string>
+    <string name="pro_category">Product Category</string>
+    <string name="pro_unit">Unit</string>
+    <string name="pro_measurement">Measurement(SFT)</string>
+    <string name="pro_weight">Weight(KG)</string>
+    <string name="pro_rate">Rate</string>
+    <string name="is_active">Is Active</string>
 
 
-    <!--Merchant Billing-->
+    <!--Merchant Billing Report-->
     <string name="merchant_billing">Merchant Billing</string>
     <string name="to">To</string>
     <string name="personal_information">Personal Info.</string>
     <string name="parcel_value">Parcel Value</string>
     <string name="cod_charge">COD Charge</string>
     <string name="service_charge">Service Charge</string>
-    <string name="merchant_bill">Merchant Bill</string>
+    <string name="merchant_bill">Bill</string>
     <string name="status">Status</string>
-
-
-
-
-
-    <!--Demo Spinner list-->
-    <string-array name="service_arrays">
-        <item>Select one</item>
-        <item>On Call Service</item>
-        <item>Express Delivery</item>
-        <item>Next Day</item>
-    </string-array>
-
-    <string-array name="district_arrays">
-        <item>Select one</item>
-        <item>Dhaka</item>
-        <item>Khulna</item>
-        <item>Rajshahi</item>
-    </string-array>
-
-    <string-array name="delivery_arrays">
-        <item>Select one</item>
-        <item>Rahim</item>
-        <item>Karim</item>
-        <item>Rajon</item>
-    </string-array>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
 
 
 </resources>
