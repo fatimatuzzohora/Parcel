@@ -36,7 +36,7 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     private TextView totalPickup,totalDelivery,totalOnProcess,totalCancel;
-    private RelativeLayout merchantProfile, merchantRequest;
+   // private RelativeLayout merchantProfile, merchantRequest;
     private RelativeLayout call, msg;
     TempUserInfo tempUserInfo;
     private ApiInterface apiInterface;
@@ -53,13 +53,13 @@ public class HomeActivity extends AppCompatActivity
         totalOnProcess = findViewById(R.id.totalOnProcess);
         totalCancel = findViewById(R.id.totalCancel);
 
-        merchantProfile = findViewById(R.id.merchant_profile);
-        merchantRequest = findViewById(R.id.merchant_request);
+        //merchantProfile = findViewById(R.id.merchant_profile);
+        //merchantRequest = findViewById(R.id.merchant_request);
         call = findViewById(R.id.call);
         msg = findViewById(R.id.msg);
 
-        merchantProfile.setOnClickListener(this);
-        merchantRequest.setOnClickListener(this);
+       // merchantProfile.setOnClickListener(this);
+       // merchantRequest.setOnClickListener(this);
         call.setOnClickListener(this);
         msg.setOnClickListener(this);
 
@@ -184,8 +184,6 @@ public class HomeActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_mer_bill) {
             startActivity(new Intent(HomeActivity.this,MerchantBillingActivity.class));
-        } else if (id == R.id.nav_parcel) {
-
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -197,11 +195,11 @@ public class HomeActivity extends AppCompatActivity
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.merchant_profile :
-                startActivity(new Intent(HomeActivity.this, MerchantProfileActivity.class));
+                //startActivity(new Intent(HomeActivity.this, MerchantProfileActivity.class));
                 break;
 
             case R.id.merchant_request:
-                startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
+                //startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
                 break;
 
             case R.id.call:

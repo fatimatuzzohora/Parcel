@@ -19,4 +19,12 @@
     <color name="colorDarkPink">#c43147</color>
     <color name="colorPink">#cf4055</color>
     <color name="colorLightPink">#d45467</color>
+
+    <color name="colorDarkGreen">#005e44</color>
+    <color name="colorGreen">#007555</color>
+    <color name="colorLightGreen">#00926a</color>
+
+    <color name="colorSaturatedGreen">#00845c</color>
+    <color name="colorDesaturatedGreen">#0c6950</color>
+    <color name="colorSeaGreen">#2e8b57</color>
 </resources>

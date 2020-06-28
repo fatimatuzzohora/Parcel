@@ -18,19 +18,11 @@
             android:icon="@mipmap/ic_requisition"
             android:title="@string/product" />
 
-    </group>
+        <item
+            android:id="@+id/nav_mer_bill"
+            android:icon="@mipmap/ic_password"
+            android:title="@string/merchant_billing" />
 
-    <item android:title="@string/report">
-        <menu>
-            <item
-                android:id="@+id/nav_mer_bill"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/merchant_billing" />
-            <item
-                android:id="@+id/nav_parcel"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/parcel_return_report" />
-        </menu>
-    </item>
+    </group>
 
 </menu>

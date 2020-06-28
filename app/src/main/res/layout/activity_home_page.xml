@@ -70,8 +70,8 @@
           android:layout_marginRight="@dimen/global_8dp"
           android:background="@color/colorDarkBlue"/>-->
 
-      <include
-          layout="@layout/activity_home_part3" />
+    <!--  <include
+          layout="@layout/activity_home_part3" />-->
 
 
    </LinearLayout>
