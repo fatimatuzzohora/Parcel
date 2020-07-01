@@ -10,10 +10,10 @@
     tools:context=".Activity.MerchantRequestActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar_mer_req"
+        android:id="@+id/tb_mer_req"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPink">
+        android:background="@color/colorGreen">
 
         <TextView
             android:id="@+id/toolbar_title_mer_req"

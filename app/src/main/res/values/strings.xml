@@ -1,11 +1,12 @@
 <resources>
     <string name="app_name">Parcel</string>
+    <string name="copyright">Copyright ©2019 Powered by Foot Print</string>
 
     <!-- Login Activity -->
     <string name="email">Username or Email</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign in</string>
-    <string name="signin_word"> Sign in to start your session </string>
+    <string name="signin_word"> Sign in to Start Your Session </string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -36,6 +37,8 @@
     <string name="monthly_report">Monthly View</string>
     <string name="contacts">Contacts</string>
     <string name="dashboard">Dashboard</string>
+    <string name="menu_content">Menu Content</string>
+    <string name="communication">Communication</string>
     <string name="report">Report</string>
 
 

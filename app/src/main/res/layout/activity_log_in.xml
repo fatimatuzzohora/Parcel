@@ -5,25 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@color/colorWhite"
     tools:context=".Activity.LogIn">
 
 
     <LinearLayout
+        android:id="@+id/linearlayout_signin"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:padding="@dimen/global_8dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/signin_word"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/parcel_logo"
+            android:layout_margin="@dimen/global_16dp"/>
 
 
         <!--Username Entry Field-->
@@ -33,7 +31,6 @@
             android:layout_height="wrap_content"
             android:drawableStart="@mipmap/ic_email"
             android:hint="@string/email"
-            android:text="beautyline.papyrus@gmail.com"
             android:inputType="textEmailAddress"
             style="@style/EditText"/>
 
@@ -44,7 +41,6 @@
             android:layout_height="wrap_content"
             android:drawableStart="@mipmap/ic_password"
             android:hint="@string/password"
-            android:text="beauty@line1"
             android:inputType="textPassword"
             style="@style/EditText"/>
 
@@ -73,8 +69,24 @@
 
         </RelativeLayout>
 
-
-
     </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout_wave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/linearlayout_signin"
+        android:background="@drawable/wave"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright"
+        android:padding="@dimen/global_4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

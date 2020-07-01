@@ -4,17 +4,28 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorDarkPink</item>
-        <item name="colorAccent">@color/colorLightPink</item>
+        <item name="colorPrimaryDark">@color/colorDarkGreen</item>
+        <item name="colorAccent">@color/color3</item>
     </style>
 
     <!-- Splash screen -->
     <style name="AppTheme.Launcher">
-        <item name="android:windowBackground">@drawable/splash_background</item>
+        <!--<item name="android:windowBackground">@drawable/splash_background</item>-->
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--New Splash Screen-->
+    <style name="New_Splash">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <!-- Button style-->
@@ -42,14 +53,15 @@
 
        <!-- HeaderText style-->
     <style name="HeaderTextView" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:padding">@dimen/global_4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>
 
     <!--Normal Text Style-->
     <style name="NormalTextView" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textStyle">normal</item>
         <item name="android:padding">@dimen/global_4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
@@ -72,10 +84,7 @@
 
 
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

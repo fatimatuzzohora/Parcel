@@ -29,7 +29,6 @@
             android:id="@+id/payment_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cash"
             android:layout_weight="1"
             android:layout_margin="@dimen/global_4dp"
             android:padding="@dimen/global_4dp"

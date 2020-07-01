@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Abdul Rahman"
             android:gravity="center"
-            android:textColor="@color/colorPink"
+            android:textColor="@color/colorGreen"
             android:textStyle="bold"
             style="@style/ParagraphTextView"/>
 
@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="447, Senpara Parbata, Mirpur, Dhaka"
+            android:textColor="@color/colorBlack"
             android:gravity="center"
             style="@style/ParagraphTextView"/>
 
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/global_8dp"
             android:text="01930367400"
+            android:textColor="@color/colorBlack"
             android:gravity="center"
             style="@style/ParagraphTextView"/>
 
@@ -49,6 +51,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="630tk"
+        android:textColor="@color/colorBlack"
         android:gravity="center"
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
@@ -60,6 +63,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="20tk"
+        android:textColor="@color/colorBlack"
         android:gravity="center"
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
@@ -70,6 +74,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="10tk"
+        android:textColor="@color/colorBlack"
         android:gravity="center"
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
@@ -80,6 +85,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="600tk"
+        android:textColor="@color/colorBlack"
         android:gravity="center"
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>

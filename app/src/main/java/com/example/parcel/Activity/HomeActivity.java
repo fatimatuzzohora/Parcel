@@ -18,6 +18,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,8 +38,8 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     private TextView totalPickup,totalDelivery,totalOnProcess,totalCancel;
-   // private RelativeLayout merchantProfile, merchantRequest;
-    private RelativeLayout call, msg;
+    private LinearLayout merchantProfile, merchantRequest, merchantBilling, merchantProduct;
+    private ImageView call, msg;
     TempUserInfo tempUserInfo;
     private ApiInterface apiInterface;
 
@@ -53,13 +55,17 @@ public class HomeActivity extends AppCompatActivity
         totalOnProcess = findViewById(R.id.totalOnProcess);
         totalCancel = findViewById(R.id.totalCancel);
 
-        //merchantProfile = findViewById(R.id.merchant_profile);
-        //merchantRequest = findViewById(R.id.merchant_request);
+        merchantProfile = findViewById(R.id.merchant_profile);
+        merchantRequest = findViewById(R.id.merchant_request);
+        merchantBilling = findViewById(R.id.merchant_billing);
+        merchantProduct = findViewById(R.id.merchant_product);
         call = findViewById(R.id.call);
         msg = findViewById(R.id.msg);
 
-       // merchantProfile.setOnClickListener(this);
-       // merchantRequest.setOnClickListener(this);
+        merchantProfile.setOnClickListener(this);
+        merchantRequest.setOnClickListener(this);
+        merchantBilling.setOnClickListener(this);
+        merchantProduct.setOnClickListener(this);
         call.setOnClickListener(this);
         msg.setOnClickListener(this);
 
@@ -145,12 +151,14 @@ public class HomeActivity extends AppCompatActivity
         });
     }
 
-    @Override
+    //Settings Menu Hidden
+ /*   @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.activity_home, menu);
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -165,7 +173,7 @@ public class HomeActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -195,11 +203,19 @@ public class HomeActivity extends AppCompatActivity
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.merchant_profile :
-                //startActivity(new Intent(HomeActivity.this, MerchantProfileActivity.class));
+                startActivity(new Intent(HomeActivity.this, MerchantProfileActivity.class));
                 break;
 
             case R.id.merchant_request:
-                //startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
+                startActivity(new Intent(HomeActivity.this,MerchantRequestActivity.class));
+                break;
+
+            case R.id.merchant_billing :
+                startActivity(new Intent(HomeActivity.this, MerchantBillingActivity.class));
+                break;
+
+            case R.id.merchant_product:
+                startActivity(new Intent(HomeActivity.this, ProductActivity.class));
                 break;
 
             case R.id.call:
@@ -229,8 +245,6 @@ public class HomeActivity extends AppCompatActivity
         {
             Toast.makeText(HomeActivity.this, "Ops!Can't open Facebook messenger right now. Please try again later.", Toast.LENGTH_SHORT).show();
         }
-
-
 
     }
 }

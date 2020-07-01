@@ -48,8 +48,12 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_request);
 
+        Toolbar toolbarMerReq = findViewById(R.id.tb_mer_req);
 
-        Toolbar toolbarMerReq = findViewById(R.id.toolbar_mer_req);
+        setSupportActionBar(toolbarMerReq);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //find view by id........
         service_spinnner = findViewById(R.id.sp_service);
         district_spinner = findViewById(R.id.sp_district);
@@ -198,7 +202,7 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                     Log.d("result1",jsonPrimitive.getAsString());
                     Toast.makeText(MerchantRequestActivity.this, jsonPrimitive.getAsString(), Toast.LENGTH_SHORT).show();
                 }else
-                    Toast.makeText(MerchantRequestActivity.this, "else condition!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MerchantRequestActivity.this, "Failed", Toast.LENGTH_SHORT).show();
             }
 
             @Override

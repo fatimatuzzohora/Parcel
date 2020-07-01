@@ -64,7 +64,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         switch (view.getId()){
             case R.id.sign_in :
                 progressBar.setVisibility(View.VISIBLE);
-                if (Validation.editTextValidation(userId, String.valueOf(R.string.error_msg))
+                if (Validation.editTextValidation(userId, getResources().getString(R.string.error_msg))
                         && Validation.editTextValidation(password, getResources().getString(R.string.error_msg))) {
 
                             signInBtn.setVisibility(View.INVISIBLE);
@@ -73,7 +73,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         }
                 else {
                     progressBar.setVisibility(View.GONE);
-                    Toast.makeText(this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                   // Toast.makeText(this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
                 }
                 break;
         }

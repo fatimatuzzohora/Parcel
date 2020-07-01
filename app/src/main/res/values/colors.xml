@@ -20,11 +20,20 @@
     <color name="colorPink">#cf4055</color>
     <color name="colorLightPink">#d45467</color>
 
+    <!--Main Combination-->
     <color name="colorDarkGreen">#005e44</color>
     <color name="colorGreen">#007555</color>
     <color name="colorLightGreen">#00926a</color>
 
+    <!--Macthing Combination-->
     <color name="colorSaturatedGreen">#00845c</color>
     <color name="colorDesaturatedGreen">#0c6950</color>
     <color name="colorSeaGreen">#2e8b57</color>
+
+    <!--Logo Design-->
+    <color name="color1">#C6D644</color>
+    <color name="color2">#77AA4A</color>
+    <color name="color3">#47A856</color>
+    <color name="color4">#2D7756</color>
+
 </resources>

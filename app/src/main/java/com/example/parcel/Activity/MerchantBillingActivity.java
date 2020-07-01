@@ -3,6 +3,7 @@ package com.example.parcel.Activity;
 import android.app.DatePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -45,6 +46,15 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merchant_billing);
+
+        Toolbar toolbar = findViewById(R.id.tb_merchant_billing);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //get the user id from shared preference....
         TempUserInfo tempUserInfo = new TempUserInfo(getApplicationContext());

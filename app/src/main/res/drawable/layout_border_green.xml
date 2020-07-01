@@ -8,9 +8,9 @@
             <!-- Set the border color of your layout here -->
             <stroke
                 android:width="4dp"
-                android:color="@color/colorDarkPink" />
+                android:color="@color/colorGreen" />
             <solid
-                android:color="@color/colorPink" />
+                android:color="@color/colorGreen" />
         </shape>
     </item>
 

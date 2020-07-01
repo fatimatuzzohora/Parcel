@@ -8,16 +8,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/papyrus_logo"
+        android:icon="@drawable/parcel_logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/papyrus_logo"
+        android:roundIcon="@drawable/parcel_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.ProductActivity"></activity>
-        <activity android:name=".Activity.MerchantBillingActivity" />
-        <activity android:name=".Activity.MerchantRequestActivity" />
-        <activity android:name=".Activity.MerchantProfileActivity" />
+        <activity android:name=".Activity.ProductActivity"
+            android:parentActivityName=".Activity.HomeActivity"/>
+        <activity android:name=".Activity.MerchantBillingActivity"
+            android:parentActivityName=".Activity.HomeActivity"/>
+        <activity android:name=".Activity.MerchantRequestActivity"
+            android:parentActivityName=".Activity.HomeActivity"/>
+        <activity android:name=".Activity.MerchantProfileActivity"
+            android:parentActivityName=".Activity.HomeActivity"/>
         <activity
             android:name=".Activity.HomeActivity"
             android:label="@string/title_activity_home"
@@ -25,7 +29,7 @@
         <activity android:name=".Activity.LogIn" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.Launcher">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

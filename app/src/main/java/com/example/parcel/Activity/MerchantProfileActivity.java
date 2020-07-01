@@ -36,6 +36,7 @@ public class MerchantProfileActivity extends AppCompatActivity {
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         //id initialize......

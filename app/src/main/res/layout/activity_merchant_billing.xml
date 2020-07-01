@@ -9,10 +9,10 @@
     tools:context=".Activity.MerchantBillingActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/tb_home"
+        android:id="@+id/tb_merchant_billing"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPink">
+        android:background="@color/colorGreen">
 
 
         <TextView

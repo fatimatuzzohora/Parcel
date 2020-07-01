@@ -12,67 +12,72 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:background="@color/colorWhite"
        android:orientation="vertical">
       
-
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/monthly_report"
-          android:textColor="@color/colorPink"
+          android:textColor="@color/colorBlack"
           android:gravity="center"
-          style="@style/HeaderTextView" />
-
-      <View
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/global_2dp"
-          android:layout_marginBottom="@dimen/global_8dp"
-          android:layout_marginLeft="@dimen/global_8dp"
-          android:layout_marginRight="@dimen/global_8dp"
-          android:background="@color/colorPink"/>
+          android:textSize="18sp"
+          android:background="@drawable/ash_border_background"
+          android:layout_marginTop="@dimen/global_16dp"
+          android:padding="@dimen/global_4dp"
+          />
 
 
       <include
-          layout="@layout/activity_home_part1" />
+          layout="@layout/activity_home_part1"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:layout_marginBottom="30dp"/>
 
      <!-- 2nd Part-->
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="@string/contacts"
-          android:textColor="@color/colorWhite"
-          android:background="@color/colorPink"
-          android:gravity="center"
-          style="@style/HeaderTextView" />
-
+          android:text="@string/menu_content"
+          android:textColor="@color/colorBlack"
+          android:textSize="18sp"
+          android:background="@drawable/ash_border_background"
+          android:layout_marginBottom="@dimen/global_16dp"
+          android:padding="@dimen/global_4dp"
+          android:gravity="center" />
 
       <include
           layout="@layout/activity_home_part2"
-         />
-
-<!--      <TextView
-          android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:text="@string/dashboard"
-          android:layout_marginTop="@dimen/global_2dp"
-          android:layout_marginBottom="@dimen/global_2dp"
-          android:layout_marginStart="@dimen/global_8dp"
-          android:fontFamily="sans-serif-light"
-          android:textColor="@color/colorDarkBlue"
-          android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-      <View
           android:layout_width="match_parent"
-          android:layout_height="@dimen/global_2dp"
-          android:layout_marginBottom="@dimen/global_2dp"
-          android:layout_marginLeft="@dimen/global_8dp"
-          android:layout_marginRight="@dimen/global_8dp"
-          android:background="@color/colorDarkBlue"/>-->
+          android:layout_marginBottom="30dp"/>
 
-    <!--  <include
-          layout="@layout/activity_home_part3" />-->
 
+      <!-- 3rd Part-->
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/communication"
+           android:textColor="@color/colorBlack"
+           android:textSize="18sp"
+           android:background="@drawable/ash_border_background"
+           android:layout_marginBottom="@dimen/global_16dp"
+           android:padding="@dimen/global_4dp"
+           android:gravity="center" />
+
+      <include
+          layout="@layout/activity_home_part3"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:layout_marginBottom="30dp"/>
+
+
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/copyright"
+          android:padding="@dimen/global_4dp"
+          android:layout_gravity="right"/>
 
    </LinearLayout>
 

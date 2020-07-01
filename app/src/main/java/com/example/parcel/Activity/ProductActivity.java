@@ -2,6 +2,7 @@ package com.example.parcel.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -39,6 +40,13 @@ public class ProductActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+
+        Toolbar toolbar = findViewById(R.id.tb_merchant_product);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         TempUserInfo tempUserInfo = new TempUserInfo(this);
         userId = tempUserInfo.getUserId();
