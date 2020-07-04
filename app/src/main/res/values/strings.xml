@@ -48,6 +48,7 @@
     <string name="pick_up">Pick Up</string>
     <string name="delivery">Delivery</string>
     <string name="cancel">Cancel</string>
+    <string name="parcel_return">Parcel Return</string>
     <string name="on_process">On Process</string>
     <string name="total">Total</string>
     <string name="demo_num">2020</string>
@@ -107,13 +108,13 @@
     
   <!--  Product  -->
     <string name="pro_config">Product Configuration</string>
-    <string name="pro_name">Prodct Name</string>
+    <string name="pro_name">Product Name</string>
     <string name="pro_category">Product Category</string>
     <string name="pro_unit">Unit</string>
     <string name="pro_measurement">Measurement(SFT)</string>
     <string name="pro_weight">Weight(KG)</string>
     <string name="pro_rate">Rate</string>
-    <string name="is_active">Is Active</string>
+    <string name="is_active">Active</string>
 
 
     <!--Merchant Billing Report-->

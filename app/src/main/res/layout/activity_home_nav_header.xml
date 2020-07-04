@@ -12,29 +12,23 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-  <!--  <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@mipmap/ic_launcher_round" />-->
-
     <TextView
+        android:id="@+id/nav_head_mer_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:gravity="center"
-        android:text="Mustafizur Rahman"
+        android:fontFamily="sans-serif"
         android:textColor="@color/colorLightAsh"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/nav_head_mer_mobile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Banani, Dhaka"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorLightAsh"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
 </LinearLayout>

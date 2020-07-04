@@ -49,6 +49,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <EditText
@@ -67,6 +68,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <Spinner
@@ -75,7 +77,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/global_16dp"
             android:layout_marginEnd="@dimen/global_16dp"
-            android:inputType="text"/>
+            android:background="@drawable/green_border_bckground"
+            android:inputType="text"
+            android:popupBackground="@drawable/bg_green_shade_left_right"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,6 +89,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <Spinner
@@ -93,7 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/global_16dp"
             android:layout_marginEnd="@dimen/global_16dp"
-            android:inputType="text"/>
+            android:background="@drawable/green_border_bckground"
+            android:inputType="text"
+            android:popupBackground="@drawable/bg_green_shade_left_right"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -103,6 +110,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <EditText
@@ -122,6 +130,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <EditText
@@ -140,6 +149,7 @@
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         <EditText
@@ -171,6 +181,7 @@
                 android:padding="@dimen/global_4dp"
                 android:fontFamily="sans-serif-light"
                 android:textColor="@color/colorBlack"
+                android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
 
         </LinearLayout>

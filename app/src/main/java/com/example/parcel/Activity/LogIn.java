@@ -98,8 +98,18 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         if(serverResponse.getMessage().equals("true")){
                             //save the id in shared preference....
                             String userId = serverResponse.getId();
+                            String name = serverResponse.getName();
+                            String mobile = serverResponse.getMobileNo();
+
                             tempUserInfo.saveTempUserValue(userId);
-                            startActivity(new Intent(LogIn.this, HomeActivity.class));
+
+                            Toast.makeText(LogIn.this, ""+name, Toast.LENGTH_SHORT).show();
+
+                            Intent intent =  new Intent(LogIn.this, HomeActivity.class);
+                            intent.putExtra("username",name);
+                            intent.putExtra("usermobile",mobile);
+
+                            startActivity(intent);
                         }
                         else if (serverResponse.getMessage().equals("false")){
                             signInBtn.setVisibility(View.VISIBLE);

@@ -37,6 +37,9 @@ import retrofit2.Response;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
+    //Navigation header information
+    private TextView merchantHeaderName, merchantHeaderMobile;
+
     private TextView totalPickup,totalDelivery,totalOnProcess,totalCancel;
     private LinearLayout merchantProfile, merchantRequest, merchantBilling, merchantProduct;
     private ImageView call, msg;
@@ -48,6 +51,11 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.tb_home);
+
+        Intent intent=getIntent();
+
+        String username=intent.getStringExtra("username");
+        String usermobile=intent.getStringExtra("usermobile");
 
         //monthlyViewInformation
         totalPickup = findViewById(R.id.totalPickup);
@@ -61,6 +69,8 @@ public class HomeActivity extends AppCompatActivity
         merchantProduct = findViewById(R.id.merchant_product);
         call = findViewById(R.id.call);
         msg = findViewById(R.id.msg);
+
+
 
         merchantProfile.setOnClickListener(this);
         merchantRequest.setOnClickListener(this);
@@ -81,6 +91,8 @@ public class HomeActivity extends AppCompatActivity
 
         monthlyView(id);
 
+        Toast.makeText(this, ""+username, Toast.LENGTH_SHORT).show();
+
         //FloatingActionButton fab = findViewById(R.id.fab);
       /*  fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,8 +101,17 @@ public class HomeActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+      DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        //Navigation Header information
+        merchantHeaderName = navigationView.getHeaderView(0).findViewById(R.id.nav_head_mer_name);
+        merchantHeaderMobile = navigationView.getHeaderView(0).findViewById(R.id.nav_head_mer_mobile);
+       //Set the value
+        merchantHeaderName.setText(username);
+        merchantHeaderMobile.setText(usermobile);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer,toolbar ,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -98,20 +119,14 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    //Exit from the application
     @Override
     public void onBackPressed() {
-      /*  DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else {
-            super.onBackPressed();
-        }*/
 
         diaExitFromApp();
-
-
     }
+
+    //dialouge for exit from the application
     private void diaExitFromApp(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.exit);

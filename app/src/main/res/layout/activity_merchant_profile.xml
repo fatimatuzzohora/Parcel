@@ -23,7 +23,6 @@
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-
     </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
@@ -42,7 +41,6 @@
             android:id="@+id/viewPager_mer_pro"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/global_16dp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 

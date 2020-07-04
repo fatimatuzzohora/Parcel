@@ -5,14 +5,13 @@
         <shape>
             <gradient
                 android:angle="360"
-                android:startColor="@android:color/holo_green_dark"
-                android:endColor="@android:color/holo_green_light"
+                android:startColor="@color/color3"
+                android:endColor="@color/color2"
                  />
             <stroke
                 android:width="0dp"
                 android:color="#4aa5d4" />
-            <corners
-                android:radius="5dp" />
+
             <padding
                 android:bottom="10dp"
                 android:left="10dp"

@@ -77,8 +77,9 @@
                            android:paddingLeft="@dimen/global_16dp"
                            android:paddingRight="@dimen/global_16dp"
                            android:gravity="center"
-                           android:background="@color/color3"
+                           android:background="@drawable/bg_green_shade_left_right"
                            android:textColor="@color/colorWhite"
+                           android:textStyle="bold"
                            style="@style/NormalTextView"/>
 
                    </LinearLayout>
@@ -165,7 +166,8 @@
                             android:paddingLeft="@dimen/global_16dp"
                             android:paddingRight="@dimen/global_16dp"
                             android:gravity="center"
-                            android:background="@color/color3"
+                            android:background="@drawable/bg_green_shade_left_right"
+                            android:textStyle="bold"
                             android:textColor="@color/colorWhite"
                             style="@style/NormalTextView"/>
 
@@ -271,7 +273,8 @@
                             android:paddingLeft="@dimen/global_16dp"
                             android:paddingRight="@dimen/global_16dp"
                             android:gravity="center"
-                            android:background="@color/color3"
+                            android:background="@drawable/bg_green_shade_left_right"
+                            android:textStyle="bold"
                             android:textColor="@color/colorWhite"
                             style="@style/NormalTextView"/>
 
@@ -325,7 +328,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/cancel"/>
+                        android:src="@drawable/cancel" />
 
                     <View
                         android:layout_width="@dimen/global_2dp"
@@ -362,7 +365,8 @@
                             android:paddingLeft="@dimen/global_16dp"
                             android:paddingRight="@dimen/global_16dp"
                             android:gravity="center"
-                            android:background="@color/color3"
+                            android:background="@drawable/bg_green_shade_left_right"
+                            android:textStyle="bold"
                             android:textColor="@color/colorWhite"
                             style="@style/NormalTextView"/>
 
@@ -380,7 +384,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/cancel"
+                    android:text="@string/parcel_return"
                     android:textStyle="bold"
                     android:textColor="@color/colorDarkGreen"
                     android:padding="@dimen/global_4dp"
