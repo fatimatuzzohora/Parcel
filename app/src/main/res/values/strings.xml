@@ -44,7 +44,6 @@
 
     <!--Home Page Content Part-1-->
     <string name="current_month">Current Month</string>
-
     <string name="pick_up">Pick Up</string>
     <string name="delivery">Delivery</string>
     <string name="cancel">Cancel</string>
@@ -115,6 +114,8 @@
     <string name="pro_weight">Weight(KG)</string>
     <string name="pro_rate">Rate</string>
     <string name="is_active">Active</string>
+    <string name="checkbox_error">Please Active the Product for Saving Information!</string>
+
 
 
     <!--Merchant Billing Report-->

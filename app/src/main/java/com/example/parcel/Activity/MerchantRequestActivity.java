@@ -1,6 +1,7 @@
 package com.example.parcel.Activity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -17,6 +19,7 @@ import com.example.parcel.Interface.ApiInterface;
 import com.example.parcel.R;
 import com.example.parcel.model.ApiClient;
 import com.example.parcel.model.MerchantRequisition;
+import com.example.parcel.model.Validation;
 import com.example.parcel.model.spinner.DeliveryPerson;
 import com.example.parcel.model.spinner.District;
 import com.example.parcel.model.spinner.Service;
@@ -34,10 +37,9 @@ import retrofit2.Response;
 public class MerchantRequestActivity extends AppCompatActivity implements View.OnClickListener {
     private Spinner service_spinnner, district_spinner, delivery_person_spinner;
     private EditText dateET;
-    private Button merchantReqSave;
+    private Button merchantReqSaveBtn;
 
-    private Service serviceId;
-
+    private ProgressBar requestPagePB;
     private ApiInterface apiInterface;
 
     private String userId;
@@ -60,7 +62,8 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
         delivery_person_spinner = findViewById(R.id.sp_delivery_person);
 
         dateET = findViewById(R.id.date_ET);
-        merchantReqSave = findViewById(R.id.mer_req_btn);
+        merchantReqSaveBtn = findViewById(R.id.mer_req_btn);
+        requestPagePB = findViewById(R.id.request_page_pb);
 
         setSupportActionBar(toolbarMerReq);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -73,23 +76,25 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
         //set onclick listener...
         dateET.setOnClickListener(this);
-        merchantReqSave.setOnClickListener(this);
+        merchantReqSaveBtn.setOnClickListener(this);
 
         //call the method for service....
         getService();
         getDistrict();
-        Toast.makeText(this, ""+userId, Toast.LENGTH_SHORT).show();
         getDeliverPerson(userId);
     }
 
 
-    //class for getting the service
+    //get Service name from server calling API
     private void getService(){
+        requestPagePB.setVisibility(View.VISIBLE);
         Call<List<Service>>call = apiInterface.service();
         call.enqueue(new Callback<List<Service>>() {
             @Override
             public void onResponse(Call<List<Service>> call, Response<List<Service>> response) {
                 if(response.isSuccessful() && response != null){
+                    //progressbar visible
+                    requestPagePB.setVisibility(View.INVISIBLE);
 
                     List<Service>serviceList = response.body();
 
@@ -106,20 +111,21 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
             @Override
             public void onFailure(Call<List<Service>> call, Throwable t) {
+                Toast.makeText(MerchantRequestActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
 
             }
         });
     }
-
+    //get the district from server calling API
     private void getDistrict(){
+        requestPagePB.setVisibility(View.VISIBLE);
         Call<List<District>>call = apiInterface.district();
         call.enqueue(new Callback<List<District>>() {
             @Override
             public void onResponse(Call<List<District>> call, Response<List<District>> response) {
                 if(response.isSuccessful() && response.body()!= null){
+                    requestPagePB.setVisibility(View.INVISIBLE);
                     List<District>districtList = response.body();
-
-                    Toast.makeText(MerchantRequestActivity.this, ""+districtList.get(0).getDistrictName(), Toast.LENGTH_SHORT).show();
 
                     ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(),
                             R.layout.spinner_layout_merchant_request,
@@ -132,17 +138,20 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
             @Override
             public void onFailure(Call<List<District>> call, Throwable t) {
+                Toast.makeText(MerchantRequestActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
 
             }
         });
     }
-
+    //get delivery person name from server calling API
     private void getDeliverPerson(String userId){
+        requestPagePB.setVisibility(View.VISIBLE);
         Call<List<DeliveryPerson>>call = apiInterface.deliveryPerson(userId);
         call.enqueue(new Callback<List<DeliveryPerson>>() {
             @Override
             public void onResponse(Call<List<DeliveryPerson>> call, Response<List<DeliveryPerson>> response) {
                 if(response.isSuccessful() && response.body()!=null){
+                    requestPagePB.setVisibility(View.INVISIBLE);
                     List<DeliveryPerson>deliveryPeople = response.body();
 
                     ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(),
@@ -156,7 +165,7 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
             @Override
             public void onFailure(Call<List<DeliveryPerson>> call, Throwable t) {
-
+                Toast.makeText(MerchantRequestActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -193,22 +202,28 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
     //API calls for saving merchant request.....
     public void saveMerchantRequisition(MerchantRequisition merchantRequisition){
+
         Call<JsonPrimitive>call = apiInterface.saveRequisition(merchantRequisition);
         call.enqueue(new Callback<JsonPrimitive>() {
             @Override
             public void onResponse(Call<JsonPrimitive> call, Response<JsonPrimitive> response) {
-                if(response.code()==200 && response.isSuccessful()){
+                if(response.code()==200 && response.isSuccessful() && response.body()!=null){
                     JsonPrimitive jsonPrimitive = response.body();
-                    Log.d("result1",jsonPrimitive.getAsString());
-                    Toast.makeText(MerchantRequestActivity.this, jsonPrimitive.getAsString(), Toast.LENGTH_SHORT).show();
-                }else
-                    Toast.makeText(MerchantRequestActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                    requestPagePB.setVisibility(View.INVISIBLE);
+                    Toast.makeText(MerchantRequestActivity.this, jsonPrimitive.getAsString(), Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(MerchantRequestActivity.this, HomeActivity.class));
+
+                }else{
+                    Toast.makeText(MerchantRequestActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(Call<JsonPrimitive> call, Throwable t) {
-                Toast.makeText(MerchantRequestActivity.this, "Network Problem "+t, Toast.LENGTH_SHORT).show();
-                Log.d("result3", t.getMessage());
+                requestPagePB.setVisibility(View.INVISIBLE);
+                merchantReqSaveBtn.setVisibility(View.VISIBLE);
+                Toast.makeText(MerchantRequestActivity.this,getResources().getString(R.string.net_error) , Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -222,15 +237,17 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                 break;
 
             case R.id.mer_req_btn:
+                merchantReqSaveBtn.setVisibility(View.INVISIBLE);
+                requestPagePB.setVisibility(View.VISIBLE);
+
                 if(service_spinnner.getSelectedItem() != null
                         && district_spinner.getSelectedItem()!=null
                             && delivery_person_spinner.getSelectedItem()!=null
-                                && dateET.getText()!=null){
+                                && Validation.editTextValidation(dateET,getResources().getString(R.string.error_msg))){
 
                     Service service = (Service) service_spinnner.getSelectedItem();
                     District district = (District) district_spinner.getSelectedItem();
                     DeliveryPerson deliveryPerson = (DeliveryPerson) delivery_person_spinner.getSelectedItem();
-
 
                     //Binding the data......
                     MerchantRequisition merchantRequisition = new MerchantRequisition(service.getServiceId(),
@@ -243,7 +260,11 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                     saveMerchantRequisition(merchantRequisition);
 
                 }
-
+                else {
+                    requestPagePB.setVisibility(View.INVISIBLE);
+                    merchantReqSaveBtn.setVisibility(View.VISIBLE);
+                    Toast.makeText(this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                }
 
                 break;
         }

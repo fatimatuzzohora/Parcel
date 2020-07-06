@@ -76,16 +76,6 @@
 
 
 
-
-    <style name="customSpinnerStyle" parent="Widget.AppCompat.TextView.SpinnerItem">
-        <item name="android:textSize">42sp</item>
-        <item name="android:textColor">@color/colorPink</item>
-    </style>
-
-
-
-
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

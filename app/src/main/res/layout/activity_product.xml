@@ -27,25 +27,37 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <ProgressBar
+        android:id="@+id/product_page_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorLightAsh"
+        android:visibility="visible"/>
+
+        <!--Start Scrollview for full product page-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="@dimen/global_4dp">
+        android:layout_marginStart="@dimen/global_8dp"
+        android:layout_marginEnd="@dimen/global_4dp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pro_name"
-            android:layout_margin="@dimen/global_16dp"
+            android:layout_marginStart="@dimen/global_16dp"
+            android:layout_marginTop="@dimen/global_16dp"
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
@@ -58,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/global_16dp"
             android:layout_marginEnd="@dimen/global_16dp"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:focusable="auto"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -106,7 +119,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pro_measurement"
-            android:layout_margin="@dimen/global_16dp"
+            android:layout_marginStart="@dimen/global_16dp"
+            android:layout_marginTop="@dimen/global_16dp"
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
@@ -126,7 +140,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pro_weight"
-            android:layout_margin="@dimen/global_16dp"
+            android:layout_marginStart="@dimen/global_16dp"
+            android:layout_marginTop="@dimen/global_16dp"
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
@@ -145,7 +160,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pro_rate"
-            android:layout_margin="@dimen/global_16dp"
+            android:layout_marginStart="@dimen/global_16dp"
+            android:layout_marginTop="@dimen/global_16dp"
             android:padding="@dimen/global_4dp"
             android:fontFamily="sans-serif-light"
             android:textColor="@color/colorBlack"
@@ -171,7 +187,8 @@
                 android:id="@+id/pro_cb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/global_16dp"/>
+                android:layout_marginTop="@dimen/global_16dp"
+                android:checked="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -186,19 +203,19 @@
 
         </LinearLayout>
 
-
         <Button
             android:id="@+id/pro_save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/save"
-            android:onClick="saveProduct"
             android:layout_margin="16dp"
             android:layout_gravity="center"
             style="@style/Button"/>
 
-    </LinearLayout>
+            </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
+
+    </RelativeLayout>
 
 </LinearLayout>

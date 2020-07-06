@@ -11,12 +11,12 @@ public class Validation {
     public static CharSequence hintName;
 
     //Edittext validation
-    public static boolean editTextValidation(EditText editText, String erroMssage){
+    public static boolean editTextValidation(EditText editText, String errorMssage){
         if(!editText.getText().toString().isEmpty()){
             return true;
         }
         else {
-            editText.setError(erroMssage);
+            editText.setError(errorMssage);
 
             editText.requestFocus();
             hintName = editText.getHint();

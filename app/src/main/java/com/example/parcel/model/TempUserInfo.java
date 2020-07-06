@@ -14,34 +14,39 @@ public class TempUserInfo {
     private SharedPreferences.Editor editor;
 
     private static final String USER_ID = "temp_user_id";
+    private static final String USER_NAME = "temp_user_name";
+    private static final String USER_MOBILE = "temp_user_mobile";
     private static final String DEFAULT_MESSAGE = "UserId not found";
 
     public TempUserInfo(Activity activity) {
         this.activity = activity;
-        this.pref = activity.getSharedPreferences("TEMP_USER_INFO", Context.MODE_PRIVATE);
+        this.pref = activity.getApplicationContext().getSharedPreferences("TEMP_USER_INFO", Context.MODE_PRIVATE);
         this.editor = pref.edit();
     }
 
 
     public TempUserInfo(Context context) {
         this.context = context;
-        this.pref = context.getSharedPreferences("TEMP_USER_INFO",Context.MODE_PRIVATE);
+        this.pref = context.getApplicationContext().getSharedPreferences("TEMP_USER_INFO",Context.MODE_PRIVATE);
         this.editor = pref.edit();
     }
 
     //save for first time
-    public String saveTempUserValue(String userId){
+    public void saveTempUserValue(String userId,String userName,String userMobile){
         editor.putString(USER_ID,userId);
+        editor.putString(USER_NAME,userName);
+        editor.putString(USER_MOBILE,userMobile);
+
         editor.commit();
-        return  "Saved Successfully";
+        //return  "Saved Successfully";
     }
 
     //save the value
-    public void dsTempUserInfo(String userId){
+    public void dsTempUserInfo(String userId,String userName,String userMobile){
             if(pref.contains(USER_ID)){
 
                 //deleteTemUserInfo();
-                saveTempUserValue(userId);
+                saveTempUserValue(userId,userName,userMobile);
             }
     }
 
@@ -53,7 +58,14 @@ public class TempUserInfo {
 
     //getting saved value
     public String getUserId(){
-            return pref.getString(USER_ID,DEFAULT_MESSAGE);
+            return pref.getString(USER_ID,null);
     }
 
+    public String getUserName(){
+        return pref.getString(USER_NAME,null);
+    }
+
+    public String getUserMobile() {
+        return pref.getString(USER_MOBILE,null);
+    }
 }

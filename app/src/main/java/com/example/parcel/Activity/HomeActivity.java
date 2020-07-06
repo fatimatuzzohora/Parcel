@@ -39,10 +39,12 @@ public class HomeActivity extends AppCompatActivity
 
     //Navigation header information
     private TextView merchantHeaderName, merchantHeaderMobile;
+    private String id, userName, userMobile;
 
     private TextView totalPickup,totalDelivery,totalOnProcess,totalCancel;
     private LinearLayout merchantProfile, merchantRequest, merchantBilling, merchantProduct;
     private ImageView call, msg;
+
     TempUserInfo tempUserInfo;
     private ApiInterface apiInterface;
 
@@ -51,11 +53,6 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         Toolbar toolbar = findViewById(R.id.tb_home);
-
-        Intent intent=getIntent();
-
-        String username=intent.getStringExtra("username");
-        String usermobile=intent.getStringExtra("usermobile");
 
         //monthlyViewInformation
         totalPickup = findViewById(R.id.totalPickup);
@@ -71,7 +68,7 @@ public class HomeActivity extends AppCompatActivity
         msg = findViewById(R.id.msg);
 
 
-
+        //set on click listener...
         merchantProfile.setOnClickListener(this);
         merchantRequest.setOnClickListener(this);
         merchantBilling.setOnClickListener(this);
@@ -87,11 +84,13 @@ public class HomeActivity extends AppCompatActivity
 
         tempUserInfo = new TempUserInfo(this);
 
-        String id = tempUserInfo.getUserId();
+         id = tempUserInfo.getUserId();
+         userName = tempUserInfo.getUserName();
+         userMobile = tempUserInfo.getUserMobile();
 
+         //dashboard calculation view class
         monthlyView(id);
 
-        Toast.makeText(this, ""+username, Toast.LENGTH_SHORT).show();
 
         //FloatingActionButton fab = findViewById(R.id.fab);
       /*  fab.setOnClickListener(new View.OnClickListener() {
@@ -109,8 +108,8 @@ public class HomeActivity extends AppCompatActivity
         merchantHeaderName = navigationView.getHeaderView(0).findViewById(R.id.nav_head_mer_name);
         merchantHeaderMobile = navigationView.getHeaderView(0).findViewById(R.id.nav_head_mer_mobile);
        //Set the value
-        merchantHeaderName.setText(username);
-        merchantHeaderMobile.setText(usermobile);
+        merchantHeaderName.setText(userName);
+        merchantHeaderMobile.setText(userMobile);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer,toolbar ,R.string.navigation_drawer_open, R.string.navigation_drawer_close);

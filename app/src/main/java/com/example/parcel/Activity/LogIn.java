@@ -101,14 +101,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                             String name = serverResponse.getName();
                             String mobile = serverResponse.getMobileNo();
 
-                            tempUserInfo.saveTempUserValue(userId);
-
-                            Toast.makeText(LogIn.this, ""+name, Toast.LENGTH_SHORT).show();
+                            tempUserInfo.saveTempUserValue(userId,name,mobile);
 
                             Intent intent =  new Intent(LogIn.this, HomeActivity.class);
-                            intent.putExtra("username",name);
-                            intent.putExtra("usermobile",mobile);
-
                             startActivity(intent);
                         }
                         else if (serverResponse.getMessage().equals("false")){

@@ -1,12 +1,15 @@
 package com.example.parcel.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -26,11 +29,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ProductActivity extends AppCompatActivity {
+public class ProductActivity extends AppCompatActivity implements View.OnClickListener {
     private ApiInterface apiInterface;
 
     private String userId;
 
+    private ProgressBar productPB;
+    private Button productSaveBtn;
     private Spinner spinnerCategory, spinnerUnit;
     private CheckBox isActiveCB;
     private EditText proNameET,proMeasurementET,proWeightET,proRateET;
@@ -64,14 +69,18 @@ public class ProductActivity extends AppCompatActivity {
         proMeasurementET = findViewById(R.id.product_measurement_ET);
         proWeightET = findViewById(R.id.product_weight_ET);
         proRateET = findViewById(R.id.product_rate_ET);
+        productPB = findViewById(R.id.product_page_pb);
+        productSaveBtn =findViewById(R.id.pro_save_btn);
 
+        productSaveBtn.setOnClickListener(this);
 
         getCategories();
         getUnits();
 
     }
-
+    //get the categories from server using API
     private void getCategories(){
+        productPB.setVisibility(View.VISIBLE);
         Call<List<Category>>call = apiInterface.categories();
         call.enqueue(new Callback<List<Category>>() {
             @Override
@@ -83,84 +92,124 @@ public class ProductActivity extends AppCompatActivity {
                             R.layout.spinner_layout_merchant_request,categories);
 
                     spinnerCategory.setAdapter(categoryAdapter);
+                    productPB.setVisibility(View.INVISIBLE);
+                }
+                else {
+                    productPB.setVisibility(View.INVISIBLE);
+                    Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<Category>> call, Throwable t) {
-
+                productPB.setVisibility(View.INVISIBLE);
+                Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    //get the unit from server calling API
     private void getUnits(){
+        productPB.setVisibility(View.VISIBLE);
         Call<List<Unit>>call = apiInterface.units();
         call.enqueue(new Callback<List<Unit>>() {
             @Override
             public void onResponse(Call<List<Unit>> call, Response<List<Unit>> response) {
-                if(response.isSuccessful() && response.body() != null){
+                if (response.isSuccessful() && response.body() != null) {
                     List<Unit> units = response.body();
 
-                    ArrayAdapter unitAdapter =  new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request,units);
+                    ArrayAdapter unitAdapter = new ArrayAdapter(getApplicationContext(),
+                            R.layout.spinner_layout_merchant_request, units);
 
                     spinnerUnit.setAdapter(unitAdapter);
                 }
+                 else {
+                productPB.setVisibility(View.INVISIBLE);
+                Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
+        }
 
             @Override
             public void onFailure(Call<List<Unit>> call, Throwable t) {
-                Toast.makeText(ProductActivity.this, "Failed to get unit", Toast.LENGTH_SHORT).show();
+                productPB.setVisibility(View.INVISIBLE);
+                Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
+    //save the product API
     private void saveProductAPI(ProductSave productSave){
         Call<JsonPrimitive>call = apiInterface.saveProduct(productSave);
 
         call.enqueue(new Callback<JsonPrimitive>() {
             @Override
             public void onResponse(Call<JsonPrimitive> call, Response<JsonPrimitive> response) {
-                if(response.isSuccessful() &&response.code()==200 && response.body()!=null){
+                if(response.isSuccessful() && response.code()==200 && response.body() != null){
                     JsonPrimitive jsonPrimitive = response.body();
 
-                    Toast.makeText(ProductActivity.this, ""+jsonPrimitive.getAsString(), Toast.LENGTH_SHORT).show();
+                    productPB.setVisibility(View.INVISIBLE);
+
+                    Toast.makeText(ProductActivity.this, jsonPrimitive.getAsString(), Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(ProductActivity.this, HomeActivity.class));
 
                 }
-                else Toast.makeText(ProductActivity.this, "The attempt did not successful", Toast.LENGTH_SHORT).show();
+                else {
+                    productPB.setVisibility(View.INVISIBLE);
+                    productSaveBtn.setVisibility(View.VISIBLE);
+                    Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(Call<JsonPrimitive> call, Throwable t) {
-                Toast.makeText(ProductActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
+                productPB.setVisibility(View.INVISIBLE);
+                productSaveBtn.setVisibility(View.VISIBLE);
+                Toast.makeText(ProductActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
+
             }
         });
     }
 
-    public void saveProduct(View view) {
 
-        Category category = (Category) spinnerCategory.getSelectedItem();
-        Unit unit = (Unit) spinnerUnit.getSelectedItem();
+    //Button CLick method
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.pro_save_btn:
+                productSaveBtn.setVisibility(View.INVISIBLE);
+                productPB.setVisibility(View.VISIBLE);
 
-        if(isActiveCB.isChecked()==true){
-            if(Validation.editTextValidation(proNameET,String.valueOf(R.string.error_msg))){
+                Category category = (Category) spinnerCategory.getSelectedItem();
+                Unit unit = (Unit) spinnerUnit.getSelectedItem();
 
-                ProductSave productSave = new ProductSave(proNameET.getText().toString(),
-                                                                category.getCatId(),
-                                                                unit.getUnitId(),
-                                                                proRateET.getText().toString(),
-                                                                proWeightET.getText().toString(),
-                                                                proMeasurementET.getText().toString(),
-                                                                userId,
-                                                                "true");
+                if(isActiveCB.isChecked()){
+                    if(Validation.editTextValidation(proNameET,getResources().getString(R.string.error_msg))){
 
-                saveProductAPI(productSave);
+                        ProductSave productSave = new ProductSave(proNameET.getText().toString(),
+                                category.getCatId(),
+                                unit.getUnitId(),
+                                proRateET.getText().toString(),
+                                proWeightET.getText().toString(),
+                                proMeasurementET.getText().toString(),
+                                userId,
+                                "true");
+
+                        saveProductAPI(productSave);
+
+                    }
+                    else {
+                        productPB.setVisibility(View.INVISIBLE);
+                        productSaveBtn.setVisibility(View.VISIBLE);
+                    }
 
                 }
+                else {
+                    productPB.setVisibility(View.INVISIBLE);
+                    productSaveBtn.setVisibility(View.VISIBLE);
+                    Toast.makeText(this, getResources().getString(R.string.checkbox_error), Toast.LENGTH_SHORT).show();
+                }
+
 
         }
-        else Toast.makeText(this, "Please active the product", Toast.LENGTH_SHORT).show();
-
-
     }
 }
