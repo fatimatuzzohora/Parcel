@@ -9,6 +9,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.parcel.Adapter.AdapterBillingReport;
@@ -32,13 +34,17 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
     private EditText startDate, endDate;
     private ImageView searchbtn;
 
+    private TextView parcelValueTotal,codChargeTotal, serviceChargeTotal, billTotal;
+
+    private ProgressBar billingReportPB;
+    private TextView billingReportTV;
+
     private String userId;
     private ApiInterface apiInterface;
 
     private Calendar calendar;
     private int year, month, day;
 
-    String date;
 
     private AdapterBillingReport adapterBillingReport;
     private List<BillingReport> billingReports ;
@@ -64,11 +70,18 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
 
         //find view by id....
-        billingReportLV = findViewById(R.id.billing_report_LV);
+        billingReportLV = findViewById(R.id.billing_report_lv);
         startDate = findViewById(R.id.start_date_ET);
         endDate = findViewById(R.id.end_date_ET);
         searchbtn = findViewById(R.id.search_btn);
 
+        billingReportPB = findViewById(R.id.billing_report_pb);
+        billingReportTV = findViewById(R.id.billing_report_tv);
+
+        parcelValueTotal=findViewById(R.id.sub_parcel_value);
+        codChargeTotal=findViewById(R.id.sub_cod_charge);
+        serviceChargeTotal= findViewById(R.id.sub_service_charge);
+        billTotal = findViewById(R.id.sub_bill);
 
         //click events....
         startDate.setOnClickListener(this);
@@ -87,25 +100,58 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
             @Override
             public void onResponse(Call<List<BillingReport>> call, Response<List<BillingReport>> response) {
                 if(response.isSuccessful() && response.body() != null){
-                    Toast.makeText(MerchantBillingActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                    billingReports = response.body();
 
+                    billingReports = response.body();
                     showReportIntoList();
+
                 }
-                else Toast.makeText(MerchantBillingActivity.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
+                else {
+                    billingReportPB.setVisibility(View.INVISIBLE);
+                    Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
             public void onFailure(Call<List<BillingReport>> call, Throwable t) {
-                Toast.makeText(MerchantBillingActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                billingReportPB.setVisibility(View.INVISIBLE);
+                Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     //set the list of the report in the adapter
     private void showReportIntoList() {
-        adapterBillingReport =  new AdapterBillingReport(getApplicationContext(),R.layout.custom_merchant_billing_lv,billingReports);
-        billingReportLV.setAdapter(adapterBillingReport);
+        if (billingReports.size()==0){
+            //for no value message...
+            billingReportTV.setVisibility(View.VISIBLE);
+            billingReportLV.setVisibility(View.INVISIBLE);
+            billingReportPB.setVisibility(View.INVISIBLE);
+        }else
+        {
+            //setting listview in to the adapter
+            adapterBillingReport =  new AdapterBillingReport(getApplicationContext(),R.layout.custom_merchant_billing_lv,billingReports);
+            billingReportLV.setAdapter(adapterBillingReport);
+
+            //showing the sub total value ....
+            for(int i=0; i<billingReports.size();i++){
+                Double parcelTotal =+ Double.valueOf(billingReports.get(i).getParcelValue());
+                parcelValueTotal.setText(String.valueOf(parcelTotal));
+
+                Double codTotal =+Double.valueOf(billingReports.get(i).getCodCharge());
+                codChargeTotal.setText(String.valueOf(codTotal));
+
+                Double serviceTotal =+ Double.valueOf(billingReports.get(i).getDeliveryCharge());
+                serviceChargeTotal.setText(String.valueOf(serviceTotal));
+
+                Double billChargeTotal =+ Double.valueOf(billingReports.get(i).getMerchantBill());
+                billTotal.setText(String.valueOf(billChargeTotal));
+
+            }
+
+            //progressbar...
+            billingReportPB.setVisibility(View.INVISIBLE);
+        }
+
     }
 
     //Datepicker Method ....
@@ -150,12 +196,13 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
                 if(Validation.editTextValidation(startDate,getResources().getString(R.string.error_msg))
                         && Validation.editTextValidation(endDate, getResources().getString(R.string.error_msg))){
 
+                    //showing progressbar after clicking search button...
+                    billingReportPB.setVisibility(View.VISIBLE);
+
                     //fetch the billing report data by calling API
                     billingReport();
 
                 }
-
-
                 break;
         }
     }

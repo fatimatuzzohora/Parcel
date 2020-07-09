@@ -130,5 +130,8 @@
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
 
+    <string name="sub_total">Sub Total</string>
+    <string name="no_data">No Data Found</string>
+
 
 </resources>
