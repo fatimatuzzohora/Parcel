@@ -1,10 +1,12 @@
 package com.example.parcel.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -170,12 +172,20 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
         });
     }
 
+    private void keyboardHiding(){
+        //It will hide the virtual keyboard...........
+        //New Learning........
+        InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
 
     //Button CLick method
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.pro_save_btn:
+                keyboardHiding();
                 productSaveBtn.setVisibility(View.INVISIBLE);
                 productPB.setVisibility(View.VISIBLE);
 

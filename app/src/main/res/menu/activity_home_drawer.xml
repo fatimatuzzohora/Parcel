@@ -11,19 +11,19 @@
             android:iconTint="@color/colorPink"/>
         <item
             android:id="@+id/nav_mer_req"
-            android:icon="@mipmap/ic_requisition"
+            android:icon="@mipmap/ic_request"
             android:title="@string/merchant_request"
             android:iconTint="@color/colorGreen"/>
 
         <item
             android:id="@+id/nav_mer_product"
-            android:icon="@drawable/ic_add_product"
+            android:icon="@mipmap/ic_product"
             android:title="@string/product"
             android:iconTint="@color/colorDarkPurple"/>
 
         <item
             android:id="@+id/nav_mer_bill"
-            android:icon="@drawable/merchant_billing"
+            android:icon="@mipmap/ic_billing"
             android:title="@string/merchant_billing"
             android:iconTint="@color/colorDarkBlue"/>
 

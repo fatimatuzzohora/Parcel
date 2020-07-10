@@ -1,10 +1,12 @@
 package com.example.parcel.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -63,6 +65,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.sign_in :
+                //Virtual Keyboard Hiding
+                keyboardHiding();
+
                 progressBar.setVisibility(View.VISIBLE);
                 if (Validation.editTextValidation(userId, getResources().getString(R.string.error_msg))
                         && Validation.editTextValidation(password, getResources().getString(R.string.error_msg))) {
@@ -78,6 +83,12 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
 
+    }
+    private void keyboardHiding(){
+        //It will hide the virtual keyboard...........
+        //New Learning........
+        InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     //API Network Call

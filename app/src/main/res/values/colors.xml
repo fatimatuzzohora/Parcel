@@ -28,7 +28,7 @@
     <!--Macthing Combination-->
     <color name="colorSaturatedGreen">#00845c</color>
     <color name="colorDesaturatedGreen">#0c6950</color>
-    <color name="colorSeaGreen">#2e8b57</color>
+    <color name="colorSeaGreen">#2e8b57</color><!-- navigation icon color-->
 
     <!--Logo Design-->
     <color name="color1">#C6D644</color>

@@ -1,10 +1,12 @@
 package com.example.parcel.Activity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,6 +23,7 @@ import com.example.parcel.model.BillingReport;
 import com.example.parcel.model.TempUserInfo;
 import com.example.parcel.model.Validation;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
@@ -35,6 +38,11 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
     private ImageView searchbtn;
 
     private TextView parcelValueTotal,codChargeTotal, serviceChargeTotal, billTotal;
+
+    private double parcelTotal=0.0;
+    private double codTotal=0.0;
+    private double serviceTotal= 0.0;
+    private double billChargeTotal =0.0;
 
     private ProgressBar billingReportPB;
     private TextView billingReportTV;
@@ -103,18 +111,17 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
 
                     billingReports = response.body();
                     showReportIntoList();
-
                 }
                 else {
                     billingReportPB.setVisibility(View.INVISIBLE);
-                    Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<BillingReport>> call, Throwable t) {
                 billingReportPB.setVisibility(View.INVISIBLE);
-                Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MerchantBillingActivity.this, getResources().getString(R.string.net_error), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -122,34 +129,45 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
     //set the list of the report in the adapter
     private void showReportIntoList() {
         if (billingReports.size()==0){
+
             //for no value message...
-            billingReportTV.setVisibility(View.VISIBLE);
             billingReportLV.setVisibility(View.INVISIBLE);
+            billingReportTV.setVisibility(View.VISIBLE);
             billingReportPB.setVisibility(View.INVISIBLE);
+
+            //Subtotal TextView...
+            parcelValueTotal.setText("0.0");
+            codChargeTotal.setText("0.0");
+            serviceChargeTotal.setText("0.0");
+            billTotal.setText("0.0");
+
         }else
         {
+            //Textview & progressbar will be invisible if get the data
+            billingReportTV.setVisibility(View.INVISIBLE);
+            billingReportPB.setVisibility(View.INVISIBLE);
+            billingReportLV.setVisibility(View.VISIBLE);
+
             //setting listview in to the adapter
             adapterBillingReport =  new AdapterBillingReport(getApplicationContext(),R.layout.custom_merchant_billing_lv,billingReports);
             billingReportLV.setAdapter(adapterBillingReport);
 
             //showing the sub total value ....
             for(int i=0; i<billingReports.size();i++){
-                Double parcelTotal =+ Double.valueOf(billingReports.get(i).getParcelValue());
-                parcelValueTotal.setText(String.valueOf(parcelTotal));
 
-                Double codTotal =+Double.valueOf(billingReports.get(i).getCodCharge());
-                codChargeTotal.setText(String.valueOf(codTotal));
+                parcelTotal += Double.valueOf(billingReports.get(i).getParcelValue());
+                parcelValueTotal.setText(String.valueOf(decimalFormat(parcelTotal)));
 
-                Double serviceTotal =+ Double.valueOf(billingReports.get(i).getDeliveryCharge());
-                serviceChargeTotal.setText(String.valueOf(serviceTotal));
+                codTotal += Double.valueOf(billingReports.get(i).getCodCharge());
+                codChargeTotal.setText(String.valueOf(decimalFormat(codTotal)));
 
-                Double billChargeTotal =+ Double.valueOf(billingReports.get(i).getMerchantBill());
-                billTotal.setText(String.valueOf(billChargeTotal));
+                serviceTotal += Double.valueOf(billingReports.get(i).getDeliveryCharge());
+                serviceChargeTotal.setText(String.valueOf(decimalFormat(serviceTotal)));
 
+                billChargeTotal += Double.valueOf(billingReports.get(i).getMerchantBill());
+                billTotal.setText(String.valueOf(decimalFormat(billChargeTotal)));
             }
 
-            //progressbar...
-            billingReportPB.setVisibility(View.INVISIBLE);
         }
 
     }
@@ -196,8 +214,14 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
                 if(Validation.editTextValidation(startDate,getResources().getString(R.string.error_msg))
                         && Validation.editTextValidation(endDate, getResources().getString(R.string.error_msg))){
 
+                    //It will hide the virtual keyboard...........
+                    //New Learning........
+                    InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    inputManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+
                     //showing progressbar after clicking search button...
                     billingReportPB.setVisibility(View.VISIBLE);
+                    billingReportTV.setVisibility(View.INVISIBLE);
 
                     //fetch the billing report data by calling API
                     billingReport();
@@ -207,9 +231,10 @@ public class MerchantBillingActivity extends AppCompatActivity implements View.O
         }
     }
 
-
-
-
-
+    // decimal format
+    public String decimalFormat(double value){
+        DecimalFormat format = new DecimalFormat("0.#");
+        return format.format(value);
+    }
 
 }

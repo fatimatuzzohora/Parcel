@@ -1,12 +1,14 @@
 package com.example.parcel.Activity;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -229,6 +231,13 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
 
     }
 
+    private void keyboardHiding(){
+        //It will hide the virtual keyboard...........
+        //New Learning........
+        InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -237,6 +246,8 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                 break;
 
             case R.id.mer_req_btn:
+                //Hide the Keyboard
+                keyboardHiding();
                 merchantReqSaveBtn.setVisibility(View.INVISIBLE);
                 requestPagePB.setVisibility(View.VISIBLE);
 

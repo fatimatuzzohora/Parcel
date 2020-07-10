@@ -17,6 +17,7 @@
         <activity android:name=".Activity.ProductActivity"
             android:parentActivityName=".Activity.HomeActivity"/>
         <activity android:name=".Activity.MerchantBillingActivity"
+            android:screenOrientation="portrait"
             android:parentActivityName=".Activity.HomeActivity"/>
         <activity android:name=".Activity.MerchantRequestActivity"
             android:parentActivityName=".Activity.HomeActivity"/>
@@ -26,7 +27,8 @@
             android:name=".Activity.HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.LogIn" />
+        <activity android:name=".Activity.LogIn"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

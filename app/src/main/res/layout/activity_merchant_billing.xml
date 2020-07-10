@@ -45,7 +45,7 @@
                 android:layout_weight="2"
                 android:layout_margin="@dimen/global_4dp"
                 android:gravity="center"
-                android:padding="@dimen/global_8dp"
+                android:drawableStart="@mipmap/ic_date_range"
                 android:hint="@string/start_date"
                 style="@style/NormalTextView"/>
 
@@ -65,6 +65,7 @@
                 android:layout_weight="2"
                 android:layout_margin="@dimen/global_4dp"
                 android:gravity="center"
+                android:drawableStart="@mipmap/ic_date_range"
                 android:padding="@dimen/global_8dp"
                 android:hint="@string/end_date"
                 style="@style/NormalTextView"/>
