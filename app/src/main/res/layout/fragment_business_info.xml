@@ -7,190 +7,153 @@
     android:orientation="vertical"
     tools:context=".Fragment.BusinessInfoFragment">
 
-    <TableLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/global_16dp"
-        android:layout_marginStart="@dimen/global_8dp">
-
+        android:layout_marginTop="@dimen/global_8dp">
 
 
         <!--Business Name-->
-    <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/global_16dp"
+        android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/business_name"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/business_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+    </LinearLayout>
 
 
         <!--Business nature-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/business_nature"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/business_nature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
             <!--Product type-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/pro_type"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/product_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic"/>
 
-    </TableRow>
+        </LinearLayout>
 
 
     <!--Website-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/website"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
         <!--Facebook page-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fb_page"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/fb_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
 
         <!--FB page Link-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fb_page_link"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/fb_page_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
-    </TableLayout>
+    </LinearLayout>
 
 </ScrollView>

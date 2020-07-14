@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
@@ -101,7 +100,7 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                     List<Service>serviceList = response.body();
 
                     ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request,
+                            R.layout.custom_spinner_layout,
                             serviceList);
 
                     service_spinnner.setAdapter(arrayAdapter);
@@ -130,7 +129,7 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                     List<District>districtList = response.body();
 
                     ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request,
+                            R.layout.custom_spinner_layout,
                             districtList);
 
                     district_spinner.setAdapter(arrayAdapter);
@@ -157,7 +156,7 @@ public class MerchantRequestActivity extends AppCompatActivity implements View.O
                     List<DeliveryPerson>deliveryPeople = response.body();
 
                     ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request,
+                            R.layout.custom_spinner_layout,
                             deliveryPeople);
 
                     delivery_person_spinner.setAdapter(arrayAdapter);

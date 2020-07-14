@@ -29,7 +29,7 @@
             android:id="@+id/user_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@mipmap/ic_email"
+            android:drawableStart="@drawable/ic_mail_24dp"
             android:hint="@string/email"
             android:text="beautyline.papyrus@gmail.com"
             android:inputType="textEmailAddress"
@@ -40,7 +40,7 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@mipmap/ic_password"
+            android:drawableStart="@drawable/ic_password_24dp"
             android:hint="@string/password"
             android:text="beauty@line1"
             android:inputType="textPassword"
@@ -54,10 +54,10 @@
 
             <ProgressBar
                 android:id="@+id/login_pb"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/global_16dp"
-                android:visibility="gone" />
+                android:layout_alignParentEnd="true" />
 
             <!--Sign in Button-->
             <Button

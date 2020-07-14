@@ -6,83 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.MerchantInfoFragment">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="@dimen/global_16dp"
-        android:layout_marginStart="@dimen/global_8dp">
+        android:layout_marginTop="@dimen/global_8dp">
 
 
        <!-- Merchant Name-->
-    <TableRow>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/global_16dp"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mer_name"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/merchant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+    </LinearLayout>
 
 
       <!--  Contact Number-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mer_contact"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView"/>
 
 
         <TextView
             android:id="@+id/merchant_phn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textStyle="italic"
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+    </LinearLayout>
 
 
         <!-- Merchant Email Address-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mer_email"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -90,159 +79,128 @@
             android:id="@+id/merchant_mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textStyle="italic"
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
        <!-- Merchant Trade License number-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/license_no"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-
+            style="@style/NormalTextView" />
 
         <TextView
             android:id="@+id/merchant_trade_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textStyle="italic"
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
         <!--Merchant Post Code-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/post_code"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/merchant_post_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textStyle="italic"
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
        <!-- Merchant General Address-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/address"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/merchant_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textStyle="italic"
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
     <!-- Merchant Mailing Address-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mailing_address"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/merchant_mailing_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
     <!-- Merchant Permanant Address-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/global_16dp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/permanant_address"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/merchant_permanent_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
-    </TableLayout>
+    </LinearLayout>
 
 </ScrollView>

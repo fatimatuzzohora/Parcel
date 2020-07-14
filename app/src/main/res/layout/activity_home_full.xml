@@ -23,9 +23,8 @@
                 android:text="@string/dashboard"
                 android:textColor="@color/colorWhite"
                 android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
                 android:layout_gravity="center"
-               android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+               android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
 
         </android.support.v7.widget.Toolbar>

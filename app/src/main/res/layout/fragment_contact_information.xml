@@ -1,56 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="@dimen/global_32dp"
-    android:layout_marginStart="@dimen/global_16dp"
     tools:context=".Fragment.ContactInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/global_8dp">
 
 
         <!--Contact person name-->
-        <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contact_name"
-                android:layout_weight="1"
-                android:layout_margin="@dimen/global_4dp"
-                android:padding="@dimen/global_4dp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+                style="@style/NormalTextView" />
 
 
             <TextView
                 android:id="@+id/contactName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="@dimen/global_4dp"
-                android:padding="@dimen/global_4dp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="normal"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                style="@style/NormalTextViewItalic" />
 
-        </TableRow>
+        </LinearLayout>
 
 
         <!--Contact Person Position-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/contact_person_pos"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -58,71 +54,56 @@
             android:id="@+id/contactPersonPosition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
         <!--Contact Number-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mer_contact"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
+            style="@style/NormalTextView" />
 
 
         <TextView
             android:id="@+id/contactNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
             <!--Contact Email-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/contact_mail"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
-
-        <TextView
+            <TextView
             android:id="@+id/contactEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
-</TableLayout>
+    </LinearLayout>
+
+</ScrollView>

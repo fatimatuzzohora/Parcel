@@ -19,9 +19,8 @@
             android:layout_height="wrap_content"
             android:text="@string/merchant_profile"
             android:textColor="@color/colorWhite"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     </android.support.v7.widget.Toolbar>
 
@@ -34,7 +33,7 @@
             app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/colorGreen"
             app:tabTextColor="@android:color/black"
-            app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"/>
 
 
         <android.support.v4.view.ViewPager

@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="@dimen/global_16dp"
-    android:layout_marginStart="@dimen/global_8dp"
     tools:context=".Fragment.BillingInfoFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/global_8dp">
+
+
         <!--Payment Mode-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/payment_mode"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -28,27 +32,22 @@
             android:id="@+id/payment_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
     <!--Bank Account Name-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bank_name"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -56,33 +55,25 @@
             android:id="@+id/bank_ac_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
-
-
-
+        </LinearLayout>
 
 
 
             <!--Bank Account number-->
-    <TableRow>
-        <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bank_no"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -90,28 +81,22 @@
             android:id="@+id/bank_ac_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
        <!-- Bank Branch Address-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bank_branch"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -119,29 +104,23 @@
             android:id="@+id/bank_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
             <!--Bkash Number-->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/bkash"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -149,29 +128,22 @@
             android:id="@+id/bkash_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
 
               <!--  Rocket number  -->
-    <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/global_16dp"
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/rocket"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextView" />
 
 
 
@@ -179,14 +151,10 @@
             android:id="@+id/rocket_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
-            android:layout_weight="1"
-            android:layout_margin="@dimen/global_4dp"
-            android:padding="@dimen/global_4dp"
-            android:fontFamily="sans-serif-light"
-            android:textStyle="normal"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            style="@style/NormalTextViewItalic" />
 
-    </TableRow>
+        </LinearLayout>
 
-</TableLayout>
+    </LinearLayout>
+
+</ScrollView>

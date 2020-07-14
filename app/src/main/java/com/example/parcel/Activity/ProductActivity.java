@@ -91,7 +91,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                     List<Category>categories = response.body();
 
                     ArrayAdapter categoryAdapter = new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request,categories);
+                            R.layout.custom_spinner_layout,categories);
 
                     spinnerCategory.setAdapter(categoryAdapter);
                     productPB.setVisibility(View.INVISIBLE);
@@ -121,7 +121,7 @@ public class ProductActivity extends AppCompatActivity implements View.OnClickLi
                     List<Unit> units = response.body();
 
                     ArrayAdapter unitAdapter = new ArrayAdapter(getApplicationContext(),
-                            R.layout.spinner_layout_merchant_request, units);
+                            R.layout.custom_spinner_layout, units);
 
                     spinnerUnit.setAdapter(unitAdapter);
                 }
