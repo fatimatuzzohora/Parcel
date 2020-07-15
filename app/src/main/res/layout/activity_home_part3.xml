@@ -1,112 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="@dimen/global_16dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/global_16dp"
+    android:weightSum="2">
 
-   <!-- <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/global_8dp">
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/global_16dp"
-            android:layout_gravity="center"
-            android:layout_weight="1">
-
-            <RelativeLayout
-                android:id="@+id/call"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@drawable/dialing_icon">
-
-             &lt;!&ndash;   <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_call"
-                    android:layout_margin="@dimen/global_4dp"/>&ndash;&gt;
-
-              &lt;!&ndash;  <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/global_16dp"
-                    android:gravity="center"
-                    android:text="@string/call"
-                    android:textColor="@color/colorDarkBlue"
-                    android:fontFamily="sans-serif-light"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>&ndash;&gt;
-
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/global_16dp"
-            android:layout_gravity="center"
-            android:layout_weight="1">
-
-            <RelativeLayout
-                android:id="@+id/msg"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="40dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/messenger"
-                    android:layout_margin="@dimen/global_8dp"/>
-&lt;!&ndash;
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/global_16dp"
-                    android:layout_marginLeft="@dimen/global_16dp"
-                    android:gravity="center"
-                    android:text="@string/msg"
-                    android:textColor="@color/colorDarkBlue"
-                    android:fontFamily="sans-serif-light"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>&ndash;&gt;
-
-            </RelativeLayout>
-
-
-        </android.support.v7.widget.CardView>
-
-
-    </LinearLayout>-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2">
 
         <ImageView
             android:id="@+id/call"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/global_64dp"
+            android:layout_height="@dimen/global_64dp"
             android:layout_weight="1"
+            android:padding="@dimen/global_8dp"
             android:src="@drawable/dialing_icon"
             android:scaleType="fitCenter" />
 
         <ImageView
             android:id="@+id/msg"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/global_64dp"
+            android:layout_height="@dimen/global_64dp"
             android:layout_weight="1"
+            android:padding="@dimen/global_8dp"
             android:src="@drawable/messenger"
             android:scaleType="fitCenter"/>
-
-    </LinearLayout>
 
 </LinearLayout>

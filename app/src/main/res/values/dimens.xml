@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="global_0dp">0dp</dimen>
+    <dimen name="global_1dp">1dp</dimen>
     <dimen name="global_2dp">2dp</dimen>
     <dimen name="global_3dp">3dp</dimen>
     <dimen name="global_4dp">4dp</dimen>
@@ -10,6 +11,9 @@
     <dimen name="global_24dp">24dp</dimen>
     <dimen name="global_32dp">32dp</dimen>
     <dimen name="global_48dp">48dp</dimen>
+    <dimen name="global_64dp">64dp</dimen>
+    <dimen name="global_84dp">84dp</dimen>
+    <dimen name="global_100dp">100dp</dimen>
 
     <!-- Customer registration -->
     <dimen name="drawable_padding_8dp">8dp</dimen>
@@ -33,6 +37,6 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <!--Font collection size-->
-    <dimen name="global_14sp">16sp</dimen>
+    <dimen name="global_14sp">14sp</dimen>
 
 </resources>

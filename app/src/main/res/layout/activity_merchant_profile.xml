@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:text="@string/merchant_profile"
             android:textColor="@color/colorWhite"
+            android:fontFamily="sans-serif"
             android:layout_gravity="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 

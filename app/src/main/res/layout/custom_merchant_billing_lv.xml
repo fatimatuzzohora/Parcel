@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/global_4dp">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Personal Information-->
+        <LinearLayout
         android:layout_width="@dimen/global_0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2.5"
@@ -19,7 +25,6 @@
             android:layout_height="wrap_content"
             android:text="Abdul Rahman"
             android:gravity="center"
-            android:textColor="@color/colorGreen"
             android:textStyle="bold"
             style="@style/ParagraphTextView"/>
 
@@ -44,8 +49,8 @@
 
     </LinearLayout>
 
-
-    <TextView
+        <!--Parcel Value-->
+        <TextView
         android:id="@+id/br_parcel_value"
         android:layout_width="@dimen/global_0dp"
         android:layout_height="match_parent"
@@ -57,7 +62,8 @@
         style="@style/ParagraphTextView"/>
 
 
-    <TextView
+        <!--COD Charge-->
+        <TextView
         android:id="@+id/br_cod_charge"
         android:layout_width="@dimen/global_0dp"
         android:layout_height="match_parent"
@@ -68,7 +74,8 @@
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
 
-    <TextView
+        <!--Service Charge-->
+        <TextView
         android:id="@+id/br_service_charge"
         android:layout_width="@dimen/global_0dp"
         android:layout_height="match_parent"
@@ -79,7 +86,8 @@
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
 
-    <TextView
+        <!--Merchant Bill-->
+        <TextView
         android:id="@+id/br_merchant_bill"
         android:layout_width="@dimen/global_0dp"
         android:layout_height="match_parent"
@@ -90,37 +98,38 @@
         android:padding="@dimen/global_2dp"
         style="@style/ParagraphTextView"/>
 
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="@dimen/global_0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
 
         <TextView
             android:id="@+id/br_payment_status"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/global_0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Paid"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:padding="@dimen/global_4dp"
             android:gravity="center"
-            android:background="@android:color/holo_orange_light"
             style="@style/ParagraphTextView"/>
+
 
         <TextView
             android:id="@+id/br_delivery_status"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/global_0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Delivered"
-            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:padding="@dimen/global_4dp"
             android:gravity="center"
-            android:background="@android:color/holo_green_light"
             style="@style/ParagraphTextView"/>
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 </LinearLayout>

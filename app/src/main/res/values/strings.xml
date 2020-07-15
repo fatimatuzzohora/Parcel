@@ -121,7 +121,7 @@
     <!--Merchant Billing Report-->
     <string name="merchant_billing">Merchant Billing</string>
     <string name="to">To</string>
-    <string name="personal_information">Personal Information</string>
+    <string name="personal_information">Personal Info.</string>
     <string name="parcel_value">Parcel Value</string>
     <string name="cod_charge">COD Charge</string>
     <string name="service_charge">Service Charge</string>

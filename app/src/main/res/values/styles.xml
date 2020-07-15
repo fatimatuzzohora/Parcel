@@ -55,7 +55,7 @@
 
        <!-- HeaderText style-->
     <style name="HeaderTextView" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
         <item name="android:padding">@dimen/global_4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
@@ -63,14 +63,14 @@
 
     <!--Normal Text Style-->
     <style name="NormalTextView" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
         <item name="android:padding">@dimen/global_4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>
 
     <style name="NormalTextViewItalic" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">italic</item>
         <item name="android:padding">@dimen/global_4dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
@@ -78,7 +78,7 @@
 
     <!--Normal Text Style-->
     <style name="ParagraphTextView" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
     </style>

@@ -12,20 +12,23 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:background="@color/colorWhite">
+       android:orientation="vertical">
       
       <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/monthly_report"
           android:textColor="@color/colorBlack"
-          android:gravity="center"
-          android:textSize="18sp"
-          android:background="@drawable/ash_border_background"
-          android:layout_marginTop="@dimen/global_16dp"
+          android:layout_marginStart="@dimen/global_16dp"
           android:padding="@dimen/global_4dp"
-          />
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"/>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/global_2dp"
+          android:background="@color/colorAsh"
+          android:layout_marginStart="@dimen/global_16dp"
+          android:layout_marginEnd="@dimen/global_16dp"/>
 
 
       <include
@@ -40,11 +43,18 @@
           android:layout_height="wrap_content"
           android:text="@string/menu_content"
           android:textColor="@color/colorBlack"
-          android:textSize="18sp"
-          android:background="@drawable/ash_border_background"
-          android:layout_marginBottom="@dimen/global_16dp"
-          android:padding="@dimen/global_4dp"
-          android:gravity="center" />
+          android:layout_marginStart="@dimen/global_16dp"
+          android:padding="@dimen/global_4dp"/>
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/global_2dp"
+          android:background="@color/colorAsh"
+          android:layout_marginStart="@dimen/global_16dp"
+          android:layout_marginEnd="@dimen/global_16dp"
+          android:layout_marginBottom="@dimen/global_8dp"/>
+
 
       <include
           layout="@layout/activity_home_part2"
@@ -54,16 +64,22 @@
 
 
       <!-- 3rd Part-->
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="@string/communication"
-           android:textColor="@color/colorBlack"
-           android:textSize="18sp"
-           android:background="@drawable/ash_border_background"
-           android:layout_marginBottom="@dimen/global_16dp"
-           android:padding="@dimen/global_4dp"
-           android:gravity="center" />
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/communication"
+          android:textColor="@color/colorBlack"
+          android:layout_marginStart="@dimen/global_16dp"
+          android:padding="@dimen/global_4dp"/>
+
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/global_2dp"
+          android:background="@color/colorAsh"
+          android:layout_marginStart="@dimen/global_16dp"
+          android:layout_marginEnd="@dimen/global_16dp"
+          android:layout_marginBottom="@dimen/global_8dp"/>
 
       <include
           layout="@layout/activity_home_part3"

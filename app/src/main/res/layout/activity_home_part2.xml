@@ -22,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/merchant_profile_img"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/global_84dp"
+                android:layout_height="@dimen/global_84dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/merchant_profile" />
@@ -32,9 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/merchant_profile"
-                android:textColor="@color/colorGreen"
+                android:textColor="@color/colorBlack"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:layout_margin="@dimen/global_8dp"
                 style="@style/NormalTextView"/>
 
@@ -48,8 +47,8 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/global_84dp"
+                android:layout_height="@dimen/global_84dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/merchant_request" />
@@ -58,9 +57,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/merchant_request"
-                android:textColor="@color/colorGreen"
+                android:textColor="@color/colorBlack"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:layout_margin="@dimen/global_8dp"
                 style="@style/NormalTextView"/>
 
@@ -84,8 +82,8 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/global_84dp"
+                android:layout_height="@dimen/global_84dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/merchant_billing" />
@@ -94,9 +92,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/merchant_billing"
-                android:textColor="@color/colorGreen"
+                android:textColor="@color/colorBlack"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:layout_margin="@dimen/global_8dp"
                 style="@style/NormalTextView"/>
 
@@ -110,8 +107,8 @@
             android:layout_weight="1">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/global_84dp"
+                android:layout_height="@dimen/global_84dp"
                 android:layout_gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/product" />
@@ -120,9 +117,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/product"
-                android:textColor="@color/colorGreen"
+                android:textColor="@color/colorBlack"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:layout_margin="@dimen/global_8dp"
                 style="@style/NormalTextView"/>
 

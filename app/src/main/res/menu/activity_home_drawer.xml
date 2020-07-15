@@ -7,25 +7,21 @@
         <item
             android:id="@+id/nav_mer_profile"
             android:icon="@mipmap/ic_profile"
-            android:title="@string/merchant_profile"
-            android:iconTint="@color/colorPink"/>
+            android:title="@string/merchant_profile" />
         <item
             android:id="@+id/nav_mer_req"
             android:icon="@mipmap/ic_request"
-            android:title="@string/merchant_request"
-            android:iconTint="@color/colorGreen"/>
+            android:title="@string/merchant_request" />
 
         <item
             android:id="@+id/nav_mer_product"
             android:icon="@mipmap/ic_product"
-            android:title="@string/product"
-            android:iconTint="@color/colorDarkPurple"/>
+            android:title="@string/product" />
 
         <item
             android:id="@+id/nav_mer_bill"
             android:icon="@mipmap/ic_billing"
-            android:title="@string/merchant_billing"
-            android:iconTint="@color/colorDarkBlue"/>
+            android:title="@string/merchant_billing" />
 
     </group>
 
