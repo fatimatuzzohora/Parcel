@@ -89,7 +89,7 @@
 
 
     <string name="payment_mode">Payment Mode : </string>
-    <string name="bank_name">Bank Name</string>
+    <string name="bank_name">Bank Name : </string>
     <string name="bank_no">Bank A/C No : </string>
     <string name="bank_branch">Bank Branch/Address : </string>
     <string name="bkash">Bkash No : </string>
@@ -102,7 +102,7 @@
     <string name="deliver_person">Delivery Person</string>
     <string name="delivery_date">Delivery Date</string>
     <string name="save">Save</string>
-    <string name="date">Date</string>
+    <string name="select_date">Select a date</string>
     
     
   <!--  Product  -->
