@@ -31,7 +31,6 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_mail_24dp"
             android:hint="@string/email"
-            android:text="beautyline.papyrus@gmail.com"
             android:inputType="textEmailAddress"
             style="@style/EditText"/>
 
@@ -42,7 +41,6 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_password_24dp"
             android:hint="@string/password"
-            android:text="beauty@line1"
             android:inputType="textPassword"
             style="@style/EditText"/>
 

@@ -78,7 +78,6 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         }
                 else {
                     progressBar.setVisibility(View.GONE);
-                   // Toast.makeText(this, getResources().getString(R.string.error_msg), Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
